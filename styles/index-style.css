@@ -311,9 +311,6 @@ body
     width: 100%;
     text-align: center;
     margin: 0 auto;
-
-    opacity: 0;
-    animation: fadeIn 0.8s ease-in forwards;
 }
 
 .skill-grid-container{
@@ -327,12 +324,13 @@ body
 
 .skills-grid {
     display: grid;
-    height: 85%;
-    width: 85%;
+    height: auto;
+    width: 100%;
     grid-template-columns: repeat(4, 1fr);
     gap: 50px;
     justify-items: center;
     align-items: center;
+    padding: 0 40px;
 }
 
 .skill-card {
@@ -366,6 +364,7 @@ body
     font-weight: 600;
     color: var(--white);
     text-align: center;
+    margin: 0;
 }
 
 .skill-card:hover {
