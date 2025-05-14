@@ -301,7 +301,7 @@ body
 
 .skills-container h1
 {
-    color: var(--white);
+    color: var(--lightGrey);
     font-size: 4em;
     
     font-family: "Titillium Web", sans-serif;
@@ -371,6 +371,117 @@ body
     transform: translateY(-5px);
     box-shadow: 10px 10px 0px var(--darkGrey);
 }
+
+/* ------------------------------------------------------------------------------------------ */
+
+.projects-container
+{
+    background-color: var(--lightGrey);
+    box-shadow: 0px 0px 10px var(--darkGrey);
+
+    height: auto;
+    width: 100%;
+    margin: auto;
+
+    justify-content: start;
+    align-items: center;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.projects-container h1
+{
+    color: var(--chilliRed);
+    font-size: 4em;
+    
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.project {
+    display: flex; /* Align screenshot and description side by side */
+    flex-direction: row; /* Horizontal layout */
+    align-items: center; /* Vertically align content */
+    justify-content: space-between; /* Add space between screenshot and description */
+    background-color: var(--lightGrey); /* Frame background color */
+    border: 5px solid var(--darkerBlue); /* Frame border */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 15px 15px 0px var(--darkerBlue); /* Add shadow for depth */
+    padding: 20px; /* Add spacing inside the frame */
+    gap: 20px; /* Space between screenshot and description */
+    margin: 20px auto; /* Center the project section */
+    width: 90%; /* Adjust width to fit the container */
+    max-width: 1200px; /* Limit the maximum width */
+}
+
+.screenshot-fram {
+    flex: 1; /* Allow the screenshot to take up equal space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px; /* Rounded corners for the screenshot frame */
+    overflow: hidden; /* Ensure the image stays within the rounded frame */
+}
+
+.screenshot-fram img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image fills the frame */
+    border-radius: 10px; /* Match the frame's rounded corners */
+}
+
+.description {
+    flex: 2; /* Allow the description to take up more space */
+    display: flex;
+    flex-direction: column; /* Stack title and description vertically */
+    justify-content: center; /* Center content vertically */
+    gap: 10px; /* Space between title and description */
+    text-align: left; /* Align text to the left */
+}
+
+.description h1 {
+    font-size: 2.5em; /* Title font size */
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    color: var(--chilliRed); /* Title color */
+    margin: 0; /* Remove default margin */
+}
+
+.description p {
+    font-size: 1.2em; /* Description font size */
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    color: var(--darkerBlue); /* Description color */
+    line-height: 1.5; /* Improve readability */
+    margin: 0; /* Remove default margin */
+}
+
+.tools-used {
+    display: flex; /* Align icons horizontally */
+    justify-content: center; /* Center icons */
+    gap: 10px; /* Add spacing between icons */
+    margin-top: 10px; /* Add spacing above the tools section */
+}
+
+.tools-used i {
+    font-size: 1.5em; /* Adjust icon size */
+    color: var(--darkGrey); /* Icon color */
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer; /* Add pointer cursor for interactivity */
+}
+
+.tools-used i:hover {
+    color: var(--chilliRed); /* Change color on hover */
+    transform: scale(1.2); /* Slightly enlarge icon on hover */
+}
+
+
+
+
+
 
 
 
