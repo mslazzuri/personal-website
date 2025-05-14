@@ -144,6 +144,11 @@ body
     padding: 0 0 20px 0;
 }
 
+.social-media-container .social-button
+{
+    position: relative;
+}
+
 .social-media-container .social-button i {
     font-size: 30px;
     color: var(--darkGrey);
@@ -160,6 +165,32 @@ body
     color: var(--chilliRed);
     transition: all ease 0.3s;
     transform: scale(1.05);
+}
+
+/* Tooltip styling */
+.social-media-container .social-button .tooltip {
+    position: absolute;
+    bottom: 100%; /* Position above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--darkGrey);
+    color: var(--white);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+/* Show tooltip on hover */
+.social-media-container .social-button:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* ------------------------------------------------------------------------------------------ */
