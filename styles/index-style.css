@@ -474,11 +474,54 @@ body
 }
 
 .description h1 {
-    font-size: 2.5em; /* Title font size */
+     font-size: 2.5em; /* Title font size */
     font-family: "Titillium Web", sans-serif;
     font-weight: 700;
     color: var(--chilliRed); /* Title color */
     margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox to align the icon */
+    align-items: center; /* Vertically align the icon with the text */
+    gap: 10px; /* Add spacing between the text and the icon */
+}
+
+.project-link {
+    position: relative; /* Required for positioning the tooltip */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+}
+
+.project-link .tooltip {
+    position: absolute;
+    bottom: 25px; /* Position below the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--darkGrey); /* Tooltip background color */
+    color: var(--white); /* Tooltip text color */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.6em;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
+.project-link:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.project-link {
+    font-size: 0.6em;
+    color: var(--darkGrey);
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin-left: auto;
+}
+
+.project-link:hover {
+    color: var(--chilliRed); /* Change color on hover */
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
 }
 
 .description p {
