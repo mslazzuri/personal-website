@@ -170,7 +170,7 @@ body
 /* Tooltip styling */
 .social-media-container .social-button .tooltip {
     position: absolute;
-    bottom: 100%; /* Position above the icon */
+    bottom: 120%; /* Position above the icon */
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--darkGrey);
@@ -474,14 +474,21 @@ body
 }
 
 .description h1 {
-     font-size: 2.5em; /* Title font size */
+    font-size: 2.5em; /* Title font size */
     font-family: "Titillium Web", sans-serif;
     font-weight: 700;
     color: var(--chilliRed); /* Title color */
     margin: 0; /* Remove default margin */
     display: flex; /* Use flexbox to align the icon */
     align-items: center; /* Vertically align the icon with the text */
-    gap: 10px; /* Add spacing between the text and the icon */
+    gap: 10px; /*Add spacing between the text and the icon*/
+    justify-content: space-between;
+}
+
+.project-links
+{
+    display: flex;
+    gap: 10px; /* Small gap between icons */
 }
 
 .project-link {
