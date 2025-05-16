@@ -595,14 +595,13 @@ body
 
 
 /* ----------------------------------- End of Main Styles ----------------------------------- */
-@media (max-width: 1200px)
-{
-    .about-text-container
-    {
+@media (max-width: 1200px) {
+    .about-text-container {
         font-size: 1.2rem;
     }
 
     .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
         gap: 40px;
     }
 
@@ -614,18 +613,19 @@ body
     .skill-card i {
         font-size: 4em;
     }
+
     .skill-card p {
         font-size: 1.2em;
     }
 }
-@media (max-width: 1060px)
-{
-    .about-text-container
-    {
+
+@media (max-width: 1060px) {
+    .about-text-container {
         font-size: 1rem;
     }
 
     .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
         gap: 30px;
     }
 
@@ -637,17 +637,17 @@ body
     .skill-card i {
         font-size: 3em;
     }
+
     .skill-card p {
         font-size: 1em;
     }
 }
 
-@media (max-width: 865px)
-{
+@media (max-width: 865px) {
     .profile-image-container {
         width: 350px;
         height: 350px;
-        border-width: 9px; /* Adjust border size */
+        border-width: 9px;
     }
 
     .profile-image {
@@ -655,10 +655,10 @@ body
         height: 100%;
     }
 
-    /* .skills-grid{
-        display: grid;
+    .skills-grid {
         grid-template-columns: repeat(2, 1fr);
-    } */
+        gap: 20px;
+    }
 
     .skill-card {
         width: 100px;
@@ -668,13 +668,14 @@ body
     .skill-card i {
         font-size: 2.5em;
     }
+
     .skill-card p {
         font-size: 0.8em;
     }
 
     .project {
-        flex-direction: column; /* Stack screenshot and description vertically */
-        align-items: center; /* Center content */
+        flex-direction: column;
+        align-items: center;
         padding: 15px;
         gap: 15px;
     }
@@ -704,28 +705,16 @@ body
     }
 }
 
-
 @media (max-width: 765px) {
-    /* .name-container
-    {
-        padding: 0 0 0 50px;
-    } */
-
-    .about-text-container
-    {
+    .about-text-container {
         font-size: 0.8rem;
         border-width: 8px;
         box-shadow: 10px 10px 0px var(--darkerBlue);
     }
-    
-    .name-container h1,
-    .name-container h2
-    {
-        font-size: 2.5em;
-    }
 
-    .name-container .dot
-    {
+    .name-container h1,
+    .name-container h2,
+    .name-container .dot {
         font-size: 2.5em;
     }
 
@@ -734,22 +723,14 @@ body
         margin: 0 5px;
     }
 
-    .introduction p
-    {
+    .introduction p {
         font-size: 1.5em;
-        /* padding: 0 50px 0 50px; */
-    }
-
-    .profile-image
-    {
-        width: 80%;
-        height: auto;
     }
 
     .profile-image-container {
         width: 300px;
         height: 300px;
-        border-width: 8px; /* Adjust border size */
+        border-width: 8px;
     }
 
     .profile-image {
@@ -757,9 +738,8 @@ body
         height: 100%;
     }
 
-    .skills-grid{
-        /* display: grid;
-        grid-template-columns: repeat(2, 1fr); */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
 
@@ -771,31 +751,16 @@ body
     .skill-card i {
         font-size: 2.5em;
     }
+
     .skill-card p {
         font-size: 0.8em;
     }
 }
 
 @media (max-width: 660px) {
-    /* .name-container
-    {
-        padding: 0 0 0 20px;
-    } */
-    
-    .profile-image
-    {
-        width: 60%;
-        height: auto;
-    }
-
     .name-container h1,
-    .name-container h2
-    {
-        font-size: 1.8em;
-    }
-
-    .name-container .dot
-    {
+    .name-container h2,
+    .name-container .dot {
         font-size: 1.8em;
     }
 
@@ -804,10 +769,8 @@ body
         margin: 0 5px;
     }
 
-    .introduction p
-    {
+    .introduction p {
         font-size: 1.2em;
-        /* padding: 0 20px 0 20px; */
     }
 
     .profile-image-container {
@@ -816,14 +779,8 @@ body
         border-width: 6px;
     }
 
-    .profile-image {
-        width: 100%;
-        height: 100%;
-    }
-
-    .skills-grid{
-        /* display: grid;
-        grid-template-columns: repeat(2, 1fr); */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
         gap: 15px;
         width: 100%;
     }
@@ -836,6 +793,7 @@ body
     .skill-card i {
         font-size: 2.5em;
     }
+
     .skill-card p {
         font-size: 0.8em;
     }
@@ -869,10 +827,8 @@ body
     }
 }
 
-@media (max-width: 600px)
-{
-    .about-outter-row-container
-    {
+@media (max-width: 600px) {
+    .about-outter-row-container {
         flex-direction: column;
         gap: 10px;
     }
@@ -883,13 +839,7 @@ body
         border-width: 6px;
     }
 
-    .profile-image {
-        width: 100%;
-        height: 100%;
-    }
-
-    .about-text-container
-    {
+    .about-text-container {
         width: 70%;
         height: auto;
         margin: auto;
@@ -897,8 +847,7 @@ body
         box-shadow: 10px 10px 0px var(--darkerBlue);
     }
 
-    .skills-grid{
-        display: grid;
+    .skills-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
@@ -911,31 +860,16 @@ body
     .skill-card i {
         font-size: 3em;
     }
+
     .skill-card p {
         font-size: 1em;
     }
 }
 
 @media (max-width: 500px) {
-    /* .name-container
-    {
-        padding: 0 0 0 10px;
-    } */
-    
-    .profile-image
-    {
-        width: 40%;
-        height: auto;
-    }
-
     .name-container h1,
-    .name-container h2
-    {
-        font-size: 1.5em;
-    }
-
-    .name-container .dot
-    {
+    .name-container h2,
+    .name-container .dot {
         font-size: 1.5em;
     }
 
@@ -944,10 +878,8 @@ body
         margin: 0 5px;
     }
 
-    .introduction p
-    {
-        font-size: 1.0em;
-        /* padding: 0 10px 0 10px; */
+    .introduction p {
+        font-size: 1em;
     }
 
     .profile-image-container {
@@ -956,14 +888,26 @@ body
         border-width: 5px;
     }
 
-    .profile-image {
-        width: 100%;
-        height: 100%;
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .skill-card {
+        width: 90px;
+        height: 90px;
+    }
+
+    .skill-card i {
+        font-size: 2.2em;
+    }
+
+    .skill-card p {
+        font-size: 0.9em;
     }
 }
 
-@media (max-width: 416px)
-{
+@media (max-width: 416px) {
     .profile-image-container,
     .profile-image {
         display: none;
@@ -980,18 +924,30 @@ body
     .tools-used i {
         font-size: 1em;
     }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .skill-card {
+        width: 80px;
+        height: 80px;
+    }
+
+    .skill-card i {
+        font-size: 2em;
+    }
+
+    .skill-card p {
+        font-size: 0.8em;
+    }
 }
 
 @media (max-width: 325px) {
-    
     .name-container h1,
-    .name-container h2
-    {
-        font-size: 1.2em;
-    }
-
-    .name-container .dot
-    {
+    .name-container h2,
+    .name-container .dot {
         font-size: 1.2em;
     }
 
@@ -1000,10 +956,8 @@ body
         margin: 0 5px;
     }
 
-    .introduction p
-    {
+    .introduction p {
         font-size: 0.8em;
-        /* padding: 0 5px 0 5px; */
     }
 
     .skill-card {
@@ -1014,21 +968,20 @@ body
     .skill-card i {
         font-size: 2.5em;
     }
+
     .skill-card p {
         font-size: 0.8em;
+    }
+
+    .skill-grid-container h1 {
+        font-size: 0.1em;
     }
 }
 
 @media (max-width: 286px) {
-    
     .name-container h1,
-    .name-container h2
-    {
-        font-size: 0.8em;
-    }
-
-    .name-container .dot
-    {
+    .name-container h2,
+    .name-container .dot {
         font-size: 0.8em;
     }
 
@@ -1037,31 +990,33 @@ body
         margin: 0 5px;
     }
 
-    .introduction p
-    {
+    .introduction p {
         font-size: 0.8em;
-        /* padding: 0 5px 0 5px; */
     }
 
-    .about-text-container
-    {
+    .about-text-container {
         font-size: 0.5rem;
     }
 
-    .skill-grid-container h1
-    {
-        font-size: 0.8em;
+    .skill-grid-container h1 {
+        font-size: 0.2em;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
     }
 
     .skill-card {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
     }
 
     .skill-card i {
         font-size: 1.5em;
     }
+
     .skill-card p {
-        font-size: 0.5em;
+        font-size: 0.6em;
     }
 }
