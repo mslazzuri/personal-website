@@ -671,6 +671,37 @@ body
     .skill-card p {
         font-size: 0.8em;
     }
+
+    .project {
+        flex-direction: column; /* Stack screenshot and description vertically */
+        align-items: center; /* Center content */
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .description h1 {
+        font-size: 2em;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .description p {
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .tools-used {
+        justify-content: center;
+    }
+
+    .screenshot-fram {
+        width: 100%;
+    }
+
+    .screenshot-fram img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 
@@ -808,6 +839,34 @@ body
     .skill-card p {
         font-size: 0.8em;
     }
+
+    .projects-container h1 {
+        font-size: 2.5em;
+    }
+
+    .project {
+        width: 95%;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .description h1 {
+        font-size: 1.5em;
+        flex-direction: column;
+    }
+
+    .description p {
+        font-size: 0.9em;
+    }
+
+    .tools-used i {
+        font-size: 1.2em;
+    }
+
+    .project-link {
+        font-size: 0.8em;
+        margin-top: 5px;
+    }
 }
 
 @media (max-width: 600px)
@@ -908,6 +967,18 @@ body
     .profile-image-container,
     .profile-image {
         display: none;
+    }
+
+    .description h1 {
+        font-size: 1.2em;
+    }
+
+    .description p {
+        font-size: 0.8em;
+    }
+
+    .tools-used i {
+        font-size: 1em;
     }
 }
 
