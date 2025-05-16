@@ -568,7 +568,7 @@ body
     box-shadow: 0px 0px 10px var(--darkGrey);
 
     height: 100%;
-    width: 100%;
+    width: auto;
     margin: auto;
 
     justify-content: center;
@@ -577,6 +577,9 @@ body
     display: flex;
     flex-direction: column;
     gap: 0;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .contact-container h1
@@ -1114,11 +1117,20 @@ body
         font-size: 2em;
     }
 
+    .contact-container .contact-form {
+        width: 70%;
+    }
+
+    .contact-container .contact-info {
+        width: 90%;
+    }
+    
     .contact-container .contact-info p,
     .contact-container .contact-info a,
     .contact-container .contact-info i {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
+
 
     .about-container{
         justify-content: flex-start;
@@ -1168,7 +1180,7 @@ body
     }
 
     .contact-container .contact-info {
-        width: 70%;
+        width: 90%;
     }
     
     .contact-container .contact-info p,
