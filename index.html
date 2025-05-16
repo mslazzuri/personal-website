@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4c654731f9.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="./scripts/email.js"></script>
 </head>
 <body>
     <div class="row-container">
@@ -78,7 +80,7 @@
     </div>
 
     <div class="skills-container">
-        <h1><span style="color: #C21807;">$ technical</span> skills</h1>
+        <h1><span style="color: #C21807;">$ </span>tech-skills</h1>
         <div class="skill-grid-container">
             <div class="skills-grid">
                 <div class="skill-card">
@@ -224,6 +226,44 @@
             </div>
         </div>
     </div>
+
+    <div class="contact-container">
+
+        <h1>reach<span style="color: #C21807">.(</span><span style="color: #4e5f6e">out</span><span style="color: #C21807">)</span></h1>
+
+        <form id="contact-form" class="contact-form">
+            
+            <input type="text" name="name" id="name" placeholder="Name" required>
+            
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            
+            <input type="text" name="subject" id="subject" placeholder="Subject" required>
+            
+            <textarea name="message" placeholder="Your Message" required></textarea>
+
+            <button type="submit" class="submit-button">
+                <i class="fas fa-paper-plane"></i>
+                <span class="tooltip">Send</span>
+            </button>
+        </form>
+
+        <div class="contact-info">
+            <p>
+                <span style="color: #C21807">&lt;</span>Feel free to reach out for any inquiries, collaborations, or just to say hi!<span style="color: #C21807">/&gt;</span>
+            </p>
+            <p>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:matheussecco2@gmail.com">matheussecco2@gmail.com</a>
+            </p>
+            <p>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+19709142475">+1 (970) 914-2475</a>
+            </p>
+            <p>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+5511988149679">+55 (11) 98814-9679</a>
+            </p>
+        </div>
 
 </body>
 </html>
