@@ -1114,6 +1114,12 @@ body
         font-size: 2em;
     }
 
+    .contact-container .contact-info p,
+    .contact-container .contact-info a,
+    .contact-container .contact-info i {
+        font-size: 1.2rem;
+    }
+
     .about-container{
         justify-content: flex-start;
         align-items: center;
@@ -1164,14 +1170,11 @@ body
     .contact-container .contact-info {
         width: 70%;
     }
-    .contact-container .contact-info p {
-        font-size: 1em;
-    }
-    .contact-container .contact-info a {
-        font-size: 1em;
-    }
+    
+    .contact-container .contact-info p,
+    .contact-container .contact-info a,
     .contact-container .contact-info i {
-        font-size: 1em;
+        font-size: 0.8rem;
     }
 }
 
