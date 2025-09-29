@@ -3,36 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Matheus Secco Lazzuri</title>
+  <title>MSL</title>
   <link rel="stylesheet" href="style.css">
+  <!-- three.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.min.js"></script>
 </head>
 <body>
   <main class="container">
-    <section class="profile">
-      <img src="assets/profile.jpeg" alt="Matheus S. Lazzuri" class="avatar">
-      <h1>Matheus Secco Lazzuri</h1>
-      <h2>Software Engineer</h2>
-      <p class="bio">Passionate developer, problem solver, and tech enthusiast! Made in Brazil.</p>
+    <nav class="tabs">
+      <button class="tab-btn active" onclick="showTab('profile')">Profile</button>
+      <button class="tab-btn" onclick="showTab('skills')">Tech Skills</button>
+    </nav>
+    <section id="profile" class="tab-content active">
+      <div class="profile">
+        <img src="assets/profile.jpeg" alt="Your Profile Photo" class="avatar">
+        <h1>Matheus Secco Lazzuri</h1>
+        <h2>Software Engineer</h2>
+        <p class="bio">Passionate developer, problem solver, and tech enthusiast!</p>
+      </div>
+      <section class="links">
+        <h3>Find Me Online</h3>
+        <ul>
+          <li><a href="assets/resume.pdf" target="_blank">Resume</a></li>
+          <li><a href="https://github.com/mslazzuri" target="_blank">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/matheuslazzuri" target="_blank">LinkedIn</a></li>
+          <li><a href="https://instagram.com/matheus_secco" target="_blank">Instagram</a></li>
+        </ul>
+      </section>
+      <div id="threejs-container"></div>
     </section>
-    <section class="skills">
-      <h3>Skills</h3>
-      <ul>
-        <li>C++</li>
+    <section id="skills" class="tab-content">
+      <h3>Tech Skills</h3>
+      <ul class="skills-list">
+        <li>C / C++</li>
         <li>Python</li>
-        <li>Dart/Flutter</li>
+        <li>Dart / Flutter</li>
         <li>Firebase</li>
-        <li>HTML & CSS</li>
-        <li>Git & GitHub</li>
-      </ul>
-
-    </section>
-    <section class="links">
-      <h3>Find Me Online</h3>
-      <ul>
-        <li><a href="assets/resume.pdf" target="_blank">Resume</a></li>
-        <li><a href="https://github.com/mslazzuri" target="_blank">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/matheuslazzuri" target="_blank">LinkedIn</a></li>
-        <li><a href="https://instagram.com/matheus_secco" target="_blank">Instagram</a></li>
+        <li>JavaScript</li>
+        <li>HTML &amp; CSS</li>
+        <li>Git / GitHub</li>
       </ul>
     </section>
   </main>
