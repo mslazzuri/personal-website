@@ -1,42 +1,54 @@
+.jersey-10-regular {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: #f7f7f7;
+  background: #F2F2F2;
   margin: 0;
   padding: 0;
   color: #222;
 }
 
 .container {
-  max-width: 420px;
-  margin: 40px auto;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
-  padding: 32px 24px;
+  margin: 0 auto;
+  background: #F2F2F2;
+  padding: 32px 32px 32px 32px;
+  height: 100vh;
 }
 
 .tabs {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   gap: 12px;
-  margin-bottom: 20px;
+}
+
+.line {
+  background-color: #1c87c9;
+  height: 2px;
+  margin-top: 0;
+  margin-bottom: 35px;
 }
 
 .tab-btn {
-  background: #2563eb;
+  background: #1c87c9;
   color: #fff;
   border: none;
   border-radius: 6px 6px 0 0;
   padding: 8px 18px;
-  font-size: 1em;
+  font-size: 1.5em;
+  font-family: 'Jersey 10', sans-serif;
   cursor: pointer;
   transition: background 0.2s;
   outline: none;
 }
 
 .tab-btn:not(.active) {
-  background: #e0e7ff;
-  color: #2563eb;
+  background: #1c87c922;
+  color: #1c87c9;
 }
 
 .tab-content {
@@ -69,18 +81,29 @@ body {
 
 h1 {
   margin: 0 0 6px 0;
-  font-size: 2em;
+  font-size: 3em;
+  font-family: 'Jersey 10', sans-serif;
 }
 
-h2 {
+h3 {
   margin: 0 0 12px 0;
   font-weight: 400;
+  font-size: 2em;
+  font-family: 'Jersey 10', sans-serif;
   color: #666;
 }
 
 .bio {
-  font-size: 1.06em;
+  font-size: 1.5em;
   color: #444;
+  font-family: 'Jersey 10', sans-serif;
+}
+
+.links {
+  margin-top: 25px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .links h3 {
@@ -90,35 +113,54 @@ h2 {
 .links ul {
   list-style: none;
   padding: 0;
+  display: flex;
 }
 
 .links li {
   margin: 8px 0;
+  padding: 0 5px;
 }
 
 .links a {
-  color: #2563eb;
-  text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.5s;
 }
 
 .links a:hover {
-  color: #1e3a8a;
+  color: rgb(213, 213, 213);
+}
+
+.links .btn { 
+  background-color: #1c87c9;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+  cursor: pointer; 
+  transition: color 0.5s;
+}
+
+.links .btn:hover{
+  background-color: #196da2;
 }
 
 .skills-list {
   list-style: none;
   padding: 0;
-  font-size: 1.1em;
+  font-size: 1.5em;
+  font-family: 'Jersey 10', sans-serif;
 }
 
 .skills-list li {
-  background: #e0e7ff;
-  color: #2563eb;
+  color: #1c87c9;
   margin: 8px 0;
   padding: 8px 14px;
   border-radius: 7px;
-  display: inline-block;
+  display: grid;
 }
 
 /* three.js canvas */
@@ -129,6 +171,119 @@ h2 {
   background: #f1f5fa;
   border-radius: 8px;
   overflow: hidden;
+}
+
+/* Projects Section */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: #f1f5fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.project-info {
+  padding: 20px;
+}
+
+.project-title {
+  font-family: 'Jersey 10', sans-serif;
+  font-size: 1.8em;
+  margin: 0 0 12px 0;
+  color: #1c87c9;
+}
+
+.project-description {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #666;
+  margin: 0 0 16px 0;
+}
+
+.project-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 20px 0;
+}
+
+.tool-tag {
+  background: #1c87c922;
+  color: #1c87c9;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-family: 'Jersey 10', sans-serif;
+  font-weight: 500;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+}
+
+.project-link {
+  background: #1c87c9;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: 'Jersey 10', sans-serif;
+  font-size: 0.9em;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.project-link:hover {
+  background: #196da2;
+}
+
+.project-link.github {
+  background: #333;
+}
+
+.project-link.github:hover {
+  background: #555;
+}
+
+.sized-box {
+  height: 40px;
 }
 
 /* Responsive */
@@ -142,5 +297,51 @@ h2 {
   }
   #threejs-container {
     height: 120px;
+  }
+  
+  /* Make tab buttons smaller on mobile */
+  .tab-btn {
+    font-size: 1em;
+    padding: 6px 12px;
+  }
+  
+  .tabs {
+    gap: 8px;
+  }
+
+  /* Projects responsive styles */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .project-image {
+    height: 150px;
+  }
+
+  .project-info {
+    padding: 16px;
+  }
+
+  .project-title {
+    font-size: 1.5em;
+  }
+
+  .project-description {
+    font-size: 0.9em;
+  }
+
+  .project-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .project-link {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .sized-box {
+    height: 20px;
   }
 }

@@ -7,31 +7,41 @@
   <link rel="stylesheet" href="style.css">
   <!-- three.js CDN -->
   <script src="https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
 </head>
 <body>
   <main class="container">
     <nav class="tabs">
       <button class="tab-btn active" onclick="showTab('profile')">Profile</button>
       <button class="tab-btn" onclick="showTab('skills')">Tech Skills</button>
+      <button class="tab-btn" onclick="showTab('projects')">Projects</button>
+      <button class="tab-btn" onclick="showTab('about')">About</button>
+      <button class="tab-btn" onclick="showTab('contact')">Contact me</button>
     </nav>
+    
+    <div class="line"></div>
+
     <section id="profile" class="tab-content active">
       <div class="profile">
-        <img src="assets/profile.jpeg" alt="Your Profile Photo" class="avatar">
-        <h1>Matheus Secco Lazzuri</h1>
-        <h2>Software Engineer</h2>
+        <img src="assets/coffee.gif" alt="Coffee" style="width: 100px;">
+        <!-- <img src="assets/profile.jpeg" alt="Your Profile Photo" class="avatar"> -->
+        <h1>Hi, my name is Matheus.</h1>
+        <h3>I'm a Software Engineer</h3>
         <p class="bio">Passionate developer, problem solver, and tech enthusiast!</p>
       </div>
       <section class="links">
-        <h3>Find Me Online</h3>
         <ul>
-          <li><a href="assets/resume.pdf" target="_blank">Resume</a></li>
-          <li><a href="https://github.com/mslazzuri" target="_blank">GitHub</a></li>
-          <li><a href="https://linkedin.com/in/matheuslazzuri" target="_blank">LinkedIn</a></li>
-          <li><a href="https://instagram.com/matheus_secco" target="_blank">Instagram</a></li>
+          <li><a title="GitHub" href="https://github.com/mslazzuri" class="btn"><div class="fa fa-github"></div></a></li>
+          <li><a title="GitHub" href="https://www.linkedin.com/in/matheuslazzuri" class="btn"><div class="fa fa-linkedin"></div></a></li>
+          <li><a title="GitHub" href="https://instagram.com/matheus_secco" class="btn"><div class="fa fa-instagram"></div></a></li>
+          <li><a title="GitHub" href="assets/resume.pdf" class="btn"><div class="fa fa-user"></div></a></li>
         </ul>
       </section>
-      <div id="threejs-container"></div>
     </section>
+    
     <section id="skills" class="tab-content">
       <h3>Tech Skills</h3>
       <ul class="skills-list">
@@ -44,7 +54,156 @@
         <li>Git / GitHub</li>
       </ul>
     </section>
+
+    <section id="projects" class="tab-content">
+      <h3>Projects</h3>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/projects-screenshots/quantum13-screenshot.png" alt="IMS Screenshot" />
+          </div>
+          <div class="project-info">
+            <h4 class="project-title">IMS for Quantum 13</h4>
+            <p style="text-align: justify; font-size: 10pt;" class="project-description">An Integrated Management System designed for Quantum 13 for enhanced operational efficiency.</p>
+            <div class="project-tools">
+              <span class="tool-tag">Dart/Flutter</span>
+              <span class="tool-tag">Firebase</span>
+              <span class="tool-tag">JavaScript</span>
+              <span class="tool-tag">Google GCP</span>
+            </div>
+            <div class="project-links">
+              <a href="https://www.gestao-instalacao.web.app" class="project-link" target="_blank">
+                <i class="fa fa-external-link"></i> Live Demo
+              </a>
+              <a href="https://github.com/mslazzuri" class="project-link github" target="_blank">
+                <i class="fa fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/projects-screenshots/seccotruco-screenshot.png" alt="Secco Truco Screenshot" />
+          </div>
+          <div class="project-info">
+            <h4 class="project-title">Secco Truco</h4>
+            <p style="text-align: justify; font-size: 10pt;" class="project-description">Made so I could easily teach my american friends how to play this Brazilian card game.</p>
+            <div class="project-tools">
+              <span class="tool-tag">JavaScript</span>
+              <span class="tool-tag">HTML</span>
+              <span class="tool-tag">CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://www.seccotruco.com" class="project-link" target="_blank">
+                <i class="fa fa-external-link"></i> Live Demo
+              </a>
+              <a href="https://github.com/mslazzuri/truco_counter" class="project-link github" target="_blank">
+                <i class="fa fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/projects-screenshots/portfolio-screenshot.png" alt="Portfolio Screenshot" />
+          </div>
+          <div class="project-info">
+            <h4 class="project-title">Portfolio Website</h4>
+            <p style="text-align: justify; font-size: 10pt;" class="project-description">This personal portfolio website showcasing my skills, projects, and professional experience.</p>
+            <div class="project-tools">
+              <span class="tool-tag">HTML</span>
+              <span class="tool-tag">CSS</span>
+              <span class="tool-tag">JavaScript</span>
+              <span class="tool-tag">Three.js</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" target="_blank">
+                <i class="fa fa-external-link"></i> Live Demo
+              </a>
+              <a href="https://github.com/mslazzuri/personal-website" class="project-link github" target="_blank">
+                <i class="fa fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/projects-screenshots/msl-manager-screenshot.png" alt="MSL Manager Screenshot" />
+          </div>
+          <div class="project-info">
+            <h4 class="project-title">MSL Manager</h4>
+            <p style="text-align: justify; font-size: 10pt;" class="project-description">A password manager application built with Flutter and Firebase.</p>
+            <div class="project-tools">
+              <span class="tool-tag">Flutter</span>
+              <span class="tool-tag">Dart</span>
+              <span class="tool-tag">Firebase</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" target="_blank">
+                <i class="fa fa-external-link"></i> Live Demo
+              </a>
+              <a href="https://https://github.com/mslazzuri/MSL-Manager" class="project-link github" target="_blank">
+                <i class="fa fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/projects-screenshots/python-manager-screenshot.png" alt="Python Password Manager Screenshot" />
+          </div>
+          <div class="project-info">
+            <h4 class="project-title">Python Password Manager</h4>
+            <p style="text-align: justify; font-size: 10pt;" class="project-description">A secure password manager built with Python and Tkinter library, featuring encryption.</p>
+            <div class="project-tools">
+              <span class="tool-tag">Python</span>
+              <span class="tool-tag">Tkinter</span>
+              <span class="tool-tag">Encryption</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" target="_blank">
+                <i class="fa fa-external-link"></i> Live Demo
+              </a>
+              <a href="https://github.com/mslazzuri/PasswordManager-Python" class="project-link github" target="_blank">
+                <i class="fa fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/projects-screenshots/mavaquatics-screenshot.png" alt="MavAquatics Screenshot" />
+          </div>
+          <div class="project-info">
+            <h4 class="project-title">MavAquatics</h4>
+            <p style="text-align: justify; font-size: 10pt;" class="project-description">A platform for managing aquatic activities and bookings for MavAquatics swim club, at Colorado Mesa University. Part of my semester long project for Software Engineering.</p>
+            <div class="project-tools">
+              <span class="tool-tag">Flutter</span>
+              <span class="tool-tag">Dart</span>
+              <span class="tool-tag">Firebase</span>
+            </div>
+            <div class="project-links">
+              <a href="https://www.mavaquatics2025.web.app" class="project-link" target="_blank">
+                <i class="fa fa-external-link"></i> Live Demo
+              </a>
+              <a href="https://github.com/mslazzuri/mavaquatics" class="project-link github" target="_blank">
+                <i class="fa fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sized-box"></div>
+    </section>
+  
   </main>
+  
   <script src="script.js"></script>
 </body>
 </html>
