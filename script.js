@@ -24,6 +24,11 @@ function showTab(tabId) {
       document.querySelector('.tab-btn:nth-child(4)').classList.add('active');
       document.getElementById('about-me').classList.add('active');    
       break;
+
+    case "contact-me":
+      document.querySelector('.tab-btn:nth-child(5)').classList.add('active');
+      document.getElementById('contact-me').classList.add('active');    
+      break;
     
     default:
       break;

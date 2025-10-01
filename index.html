@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>MSL</title>
   <link rel="stylesheet" href="style.css">
-  <!-- three.js CDN -->
   <script src="https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,8 +17,8 @@
       <button class="tab-btn active" onclick="showTab('profile')">Profile</button>
       <button class="tab-btn" onclick="showTab('skills')">Tech Skills</button>
       <button class="tab-btn" onclick="showTab('projects')">Projects</button>
-      <button class="tab-btn" onclick="showTab('about')">About</button>
-      <button class="tab-btn" onclick="showTab('contact')">Contact me</button>
+      <button class="tab-btn" onclick="showTab('about-me')">About</button>
+      <button class="tab-btn" onclick="showTab('contact-me')">Contact me</button>
     </nav>
     
     <div class="line"></div>
@@ -43,16 +42,178 @@
     </section>
     
     <section id="skills" class="tab-content">
-      <h3>Tech Skills</h3>
-      <ul class="skills-list">
-        <li>C / C++</li>
-        <li>Python</li>
-        <li>Dart / Flutter</li>
-        <li>Firebase</li>
-        <li>JavaScript</li>
-        <li>HTML &amp; CSS</li>
-        <li>Git / GitHub</li>
-      </ul>
+      <div class="skills-container">
+        <h3>Tech Skills</h3>
+        
+        <div class="skills-content">
+          <div class="skills-intro">
+            <p>Here are the technologies and tools I work with to bring ideas to life</p>
+          </div>
+          
+          <div class="skills-categories">
+            <div class="skill-category">
+              <h4><i class="fa fa-code"></i> Programming Languages</h4>
+              <div class="skills-grid">
+                <div class="skill-item">
+                  <div class="skill-icon">
+                    <img src="assets/icons/python.png" alt="Python" class="skill-logo">
+                  </div>
+                  <div class="skill-info">
+                    <span class="skill-name">Python</span>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 75%"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="skill-item">
+                  <div class="skill-icon">
+                    <img src="assets/icons/c++.png" alt="C++" class="skill-logo">
+                  </div>
+                  <div class="skill-info">
+                    <span class="skill-name">C / C++</span>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="skill-item">
+                  <div class="skill-icon">
+                    <img src="assets/icons/dart.png" alt="Dart" class="skill-logo">
+                  </div>
+                  <div class="skill-info">
+                    <span class="skill-name">Dart</span>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 88%"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="skill-item">
+                  <div class="skill-icon">
+                    <i class="fa fa-code"></i>
+                  </div>
+                  <div class="skill-info">
+                    <span class="skill-name">JavaScript</span>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 60%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+            <div class="skill-category">
+              <h4><i class="fa fa-mobile"></i> Frameworks & Libraries</h4>
+              <div class="skills-grid">
+                <div class="skill-item">
+                  <div class="skill-icon">
+                    <img src="assets/icons/flutter.png" alt="Flutter" class="skill-logo">
+                  </div>
+                  <div class="skill-info">
+                    <span class="skill-name">Flutter</span>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="skill-item">
+                  <div class="skill-icon">
+                    <i class="fa fa-html5"></i>
+                  </div>
+                  <div class="skill-info">
+                    <span class="skill-name">HTML & CSS</span>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 60%"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="skill-item">
+                  <div class="skill-icon">
+                    <img src="assets/icons/threejs.png" alt="Three.js" class="skill-logo">
+                  </div>
+                  <div class="skill-info">
+                    <span class="skill-name">Three.js</span>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 30%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+            <div class="skill-category">
+              <h4><i class="fa fa-database"></i> Tools & Platforms</h4>
+              <div class="skills-grid">
+                <div class="skill-item">
+                  <div class="skill-icon">
+                    <img src="assets/icons/firebase.png" alt="Firebase" class="skill-logo">
+                  </div>
+                  <div class="skill-info">
+                    <span class="skill-name">Firebase</span>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="skill-item">
+                  <div class="skill-icon">
+                    <i class="fa fa-github"></i>
+                  </div>
+                  <div class="skill-info">
+                    <span class="skill-name">Git / GitHub</span>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="skill-item">
+                  <div class="skill-icon">
+                    <img src="assets/icons/gcp.webp" alt="Google Cloud" class="skill-logo">
+                  </div>
+                  <div class="skill-info">
+                    <span class="skill-name">Google Cloud</span>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 40%"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="skill-item">
+                  <div class="skill-icon">
+                    <i class="fa fa-database"></i>
+                  </div>
+                  <div class="skill-info">
+                    <span class="skill-name">MySQL</span>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 50%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+            <div class="skill-category">
+              <h4><i class="fa fa-lightbulb-o"></i> Currently Learning</h4>
+              <div class="learning-skills">
+                <div class="learning-item">
+                  <span class="learning-badge">
+                    <img src="assets/icons/docker.png" alt="Docker" class="learning-icon"> Docker
+                  </span>
+                </div>
+                <div class="learning-item">
+                  <span class="learning-badge">
+                    <img src="assets/icons/threejs.png" alt="Three.js" class="learning-icon"> Three.js
+                  </span>
+                </div>
+          </div>
+      </div>            
+      <div class="sized-box"></div>
     </section>
 
     <section id="projects" class="tab-content">
@@ -201,7 +362,165 @@
       </div>
       <div class="sized-box"></div>
     </section>
-  
+
+    <section id="about-me" class="tab-content">
+      <div class="about-container">
+        <h3>About Me</h3>
+        
+        <div class="about-content">
+          <div class="about-intro">
+            <p class="intro-text">
+              Hello! I'm <strong>Matheus</strong>, a passionate Software Engineer with a love for creating innovative solutions and solving complex problems.
+            </p>
+          </div>
+          
+          <div class="about-details">
+            <div class="about-section">
+              <h4><i class="fa fa-graduation-cap"></i> Education</h4>
+              <p>Currently pursuing <strong>Computer Science</strong> at Colorado Mesa University, where I've been developing my skills in various programming languages and technologies.</p>
+            </div>
+            
+            <div class="about-section">
+              <h4><i class="fa fa-code"></i> What I Do</h4>
+              <ul class="about-list">
+                <li>Full-stack web development with modern frameworks</li>
+                <li>Mobile/Web app development using Flutter & Dart</li>
+                <li>Front-end design</li>
+                <li>Problem-solving through clean, efficient code</li>
+              </ul>
+            </div>
+            
+            <div class="about-section">
+              <h4><i class="fa fa-heart"></i> Interests</h4>
+              <div class="interests-grid">
+                <div class="interest-item">
+                  <i class="fa fa-film"></i>
+                  <span>Movies</span>
+                </div>
+                <div class="interest-item">
+                  <i class="fa fa-trophy"></i>
+                  <span>Sports</span>
+                </div>
+                <div class="interest-item">
+                  <i class="fa fa-music"></i>
+                  <span>Music</span>
+                </div>
+                <div class="interest-item">
+                  <i class="fa fa-camera"></i>
+                  <span>Photography</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="about-section">
+              <h4><i class="fa fa-rocket"></i> Fun Facts</h4>
+              <div class="fun-facts">
+                <div class="fact-item">🇧🇷 Originally from Brazil</div>
+                <div class="fact-item">☕ Coffee enthusiast</div>
+                <div class="fact-item">🎯 Always learning new technologies</div>
+                <div class="fact-item">⚽ Soccer Fanatic</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sized-box"></div>
+    </section>
+
+    <section id="contact-me" class="tab-content">
+      <div class="contact-container">
+        <h3>Contact Me</h3>
+        
+        <div class="contact-content">
+          <div class="contact-intro">
+            <p>Let's connect! Whether you have a project in mind, want to collaborate, or just want to say hello, I'd love to hear from you.</p>
+          </div>
+          
+          <div class="contact-methods">
+            <div class="contact-info">
+              <h4><i class="fa fa-info-circle"></i> Get In Touch</h4>
+              
+              <div class="contact-item">
+                <i class="fa fa-envelope"></i>
+                <div class="contact-details">
+                  <strong>Email</strong>
+                  <a href="mailto:matheussecco2@gmail.com">matheussecco2@gmail.com</a>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <i class="fa fa-phone"></i>
+                <div class="contact-details">
+                  <strong>Phone</strong>
+                  <a href="tel:+19709142475">+1 (970) 914-2475</a>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <i class="fa fa-map-marker"></i>
+                <div class="contact-details">
+                  <strong>Location</strong>
+                  <span>Grand Junction, CO</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="contact-form">
+              <h4><i class="fa fa-paper-plane"></i> Send Me a Message</h4>
+              <form id="contactForm" action="mailto:matheussecco2@gmail.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="email">Your Email</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input type="text" id="subject" name="subject" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project or just say hello!"></textarea>
+                </div>
+                
+                <button type="submit" class="send-btn">
+                  <i class="fa fa-send"></i> Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+          
+          <div class="social-section">
+            <h4><i class="fa fa-share-alt"></i> Connect With Me</h4>
+            <div class="social-links">
+              <a title="GitHub" href="https://github.com/mslazzuri" class="social-btn github" target="_blank">
+                <i class="fa fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <a title="LinkedIn" href="https://www.linkedin.com/in/matheuslazzuri" class="social-btn linkedin" target="_blank">
+                <i class="fa fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a title="Instagram" href="https://instagram.com/matheus_secco" class="social-btn instagram" target="_blank">
+                <i class="fa fa-instagram"></i>
+                <span>Instagram</span>
+              </a>
+              <a title="Resume" href="assets/resume.pdf" class="social-btn resume" target="_blank">
+                <i class="fa fa-file-text"></i>
+                <span>Resume</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sized-box"></div>
+    </section>
+
   </main>
   
   <script src="script.js"></script>
