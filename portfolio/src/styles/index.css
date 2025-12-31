@@ -1,0 +1,43 @@
+:root {
+  --backgroundColor: #EFECE3;
+  --lightBlue: #8FABD4;
+  --darkBlue: #4A70A9;
+  --black: #000000;
+  --appbar-height: 60px;
+  
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  color: var(--black);
+  background-color: var(--backgroundColor);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.padding-section {
+  box-sizing: border-box;
+  padding: 25px;
+  /* min-height: calc(100vh - var(--appbar-height)); */
+  min-height: 100vh;
+  padding-top: calc(var(--appbar-height) + 25px);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

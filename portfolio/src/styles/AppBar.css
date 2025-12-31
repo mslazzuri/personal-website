@@ -1,0 +1,54 @@
+.appbar-container {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    z-index: 10000;
+    height: var(--appbar-height);
+    box-sizing: border-box;
+    padding: 0 24px;
+}
+
+.appbar-container .links {
+    right: 0;
+    display: flex;
+    padding: 10px 0;
+    gap: 25px;
+    padding-right: 25px;
+}
+
+.appbar-container .links li { list-style-type: none; }
+
+.appbar-container .links li a {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--black);
+    font-size: 16pt;
+}
+
+.appbar-container .links li a:hover { color: var(--lightBlue); }
+
+.appbar-container .msl-logo {
+    color: var(--darkBlue);
+    font-size: 24pt;
+    font-weight: 800;
+    padding-left: 25px;
+}
+
+@media screen and (max-width: 768px) {
+    .appbar-container .msl-logo {
+        font-size: 14pt;
+        padding-left: 5px;
+    }
+    .appbar-container .links li a { font-size: 10pt; }
+
+    .appbar-container .links {
+        padding: 5px 0;
+        gap: 8px;
+        padding-right: 5px;
+    }
+}
