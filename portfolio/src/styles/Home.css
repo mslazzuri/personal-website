@@ -1,0 +1,37 @@
+h1 {
+  color: var(--darkBlue);
+  font-size: 36pt;
+}
+
+h2 {
+  color: var(--lightBlue);
+  font-size: 24pt;
+}
+
+.coffeeGIF {
+  max-width: 250px;
+  height: auto;
+}
+
+.home-button {
+  background-color: var(--darkBlue);
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  color: var(--backgroundColor);
+  border-radius: 10px;
+  box-shadow: 4px 4px var(--lightBlue);
+}
+
+i { font-size: 18pt; }
+.home-button:hover { color: var(--lightBlue); }
+.home-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px var(--lightBlue);
+}
+
+@media screen and (max-width: 768px) {
+  h1 { font-size: 20pt; }
+  h2 { font-size: 14pt; }
+  .coffeeGIF { max-width: 200px; }
+}

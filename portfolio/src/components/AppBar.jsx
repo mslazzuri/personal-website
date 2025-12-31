@@ -8,16 +8,16 @@ function AppBar () {
                 <div className='msl-logo'>MSL</div>
                 <nav className='links'>
                     <li>
-                        <a href="#">home</a>
+                        <a href="#home">home</a>
                     </li>
                     <li>
-                        <a href="#">about:me</a>
+                        <a href="#about">about:me</a>
                     </li>
                     <li>
-                        <a href="#">projects</a>
+                        <a href="#projects">projects</a>
                     </li>
                     <li>
-                        <a href="#">contact:me</a>
+                        <a href="#contact">contact:me</a>
                     </li>
                 </nav>
             </div>
