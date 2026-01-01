@@ -31,6 +31,7 @@
 }
 
 .appbar-container .links li a:hover { color: var(--lightBlue); }
+.appbar-container .links li a.active { color: var(--darkBlue); }
 
 .appbar-container .msl-logo {
     color: var(--darkBlue);
@@ -40,14 +41,12 @@
 }
 
 @media screen and (max-width: 768px) {
-    .appbar-container .msl-logo {
-        font-size: 14pt;
-        padding-left: 5px;
-    }
+    .appbar-container .msl-logo { display: none; }
+    .appbar-container { justify-content: flex-end; padding-left: 12px; }
     .appbar-container .links li a { font-size: 10pt; }
 
     .appbar-container .links {
-        padding: 5px 0;
+        padding: 0;
         gap: 8px;
         padding-right: 5px;
     }
