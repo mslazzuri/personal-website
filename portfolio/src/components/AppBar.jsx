@@ -17,6 +17,9 @@ function AppBar () {
                         <a href="#projects">projects</a>
                     </li>
                     <li>
+                        <a href="#skills">skills</a>
+                    </li>
+                    <li>
                         <a href="#contact">contact:me</a>
                     </li>
                 </nav>

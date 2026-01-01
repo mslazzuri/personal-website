@@ -22,6 +22,20 @@ function AboutMe() {
                     <br />
                     I'm currently seeking an entry-level or junior position in the industry. Let's connect!</p>
             </div>
+            <hr />
+            <div className="interests">
+                <ul>
+                    <li><span>Age:</span>23</li>
+                    <li><span>Made in:</span>Brazil</li>
+                    <li><span>Degree:</span>Bachelor's of Computer Science</li>
+                    <li><span>College:</span>Colorado Mesa University</li>
+                    <li><span>Interests</span>Music, soccer, good food and new places</li>
+                    <li><span>Languages:</span>Portuguese, English, Spanish</li>
+                    <li><span>Goal:</span>Get a position as a Junior Developer</li>
+                    <li><span>Location:</span>Kissimmee, FL. Willing to realloacte</li>
+                    <li><span>Availability:</span>January 2026</li>
+                </ul>
+            </div>
         </>
     );
 }
