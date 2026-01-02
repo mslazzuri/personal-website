@@ -1,0 +1,13 @@
+.project-cards-row {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 50px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}

@@ -1,0 +1,38 @@
+.project-card {
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    border: 5px solid var(--black);
+    border-radius: 10px;
+    flex: 0 0 320px;
+    min-width: 35%;
+    padding: 10px;
+    height: auto;
+    box-shadow: 15px 15px var(--darkBlue);
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 14pt;
+    color: var(--darkBlue);
+}
+
+.project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid var(--backgroundColor);
+}
+
+.description {
+    font-size: 12pt;
+    text-align: justify;
+    line-height: 1.3;
+}
+
+@media screen and (max-width: 768px) {
+    .project-card { min-width: 20%; }
+}
