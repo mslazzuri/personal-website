@@ -42,12 +42,19 @@
 
 @media screen and (max-width: 768px) {
     .appbar-container .msl-logo { display: none; }
-    .appbar-container { justify-content: flex-end; padding-left: 12px; }
+
+    /* center the whole bar and remove extra padding on both sides */
+    .appbar-container { justify-content: center; padding: 0; }
+
     .appbar-container .links li a { font-size: 10pt; }
 
+    /* make sure links are centered and don't inherit right:0 */
     .appbar-container .links {
+        position: static;
+        right: auto;
+        margin: 0 auto;
         padding: 0;
         gap: 8px;
-        padding-right: 5px;
+        padding-right: 0;
     }
 }

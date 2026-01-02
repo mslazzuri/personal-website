@@ -7,7 +7,7 @@ function AboutMe() {
             <h3>about:me</h3>
             <div className='side-to-side'>
                 <img src={myPicture} alt="Me" className="myPic"/>
-                <p>
+                <p className="halfp">
                     Hello, I'm Matheus, a Software Developer who loves creating new things and seeing them come to life.
                     <br />
                     <br />

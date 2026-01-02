@@ -11,6 +11,7 @@
     max-height: 500px;
     border-radius: 10px;
     box-shadow: 10px 10px var(--darkBlue);
+    border: 5px solid var(--black);
 }
 
 h3 {
@@ -18,10 +19,9 @@ h3 {
     font-size: 24pt;
 }
 
-p {
+.halfp {
     max-width: 50%;
     text-align: justify;
-    padding-left: 10px;
 }
 
 .interests {
@@ -60,6 +60,6 @@ hr {
 @media screen and (max-width: 768px) {
     .side-to-side { flex-direction: column; }
     .myPic  { max-width: 100%; }
-    p { max-width: 100%; }
+    .halfp { max-width: 100%; }
     h3 { font-size: 20pt; }
 }
