@@ -47,6 +47,7 @@ function Projects() {
                             title={project.name}
                             imgPath={project.imgPath}
                             description={project.description}
+                            tools={project.tools}
                         />
                     ))}
                 </div>
@@ -61,6 +62,7 @@ function Projects() {
                         title={project.name}
                         imgPath={project.imgPath}
                         description={project.description}
+                        tools={project.tools}
                     />
                 ))}
             </div>

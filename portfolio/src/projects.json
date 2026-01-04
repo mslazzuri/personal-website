@@ -3,18 +3,35 @@
         "id": "1",
         "name": "IMS for Quantum13",
         "description": "This is a project for Quantum13. An Integrated Management System for the company.",
-        "imgPath": "/assets/projects-screenshots/quantum13-screenshot.png"
+        "imgPath": "/assets/projects-screenshots/quantum13-screenshot.png",
+        "tools": ["flutter", "dart", "firebase", "javascript"]
     },
     {
         "id": "2",
         "name": "Seccotruco.com",
         "description": "A basic website to teach friends how to play this brazillian card game named truco.",
-        "imgPath": "/assets/projects-screenshots/seccotruco-screenshot.png"
+        "imgPath": "/assets/projects-screenshots/seccotruco-screenshot.png",
+        "tools": ["react", "html", "css", "javascript"]
     },
     {
         "id": "3",
         "name": "MSL Manager",
         "description": "A password manager made in Dart/Flutter",
-        "imgPath": "/assets/projects-screenshots/msl-manager-screenshot.png"
+        "imgPath": "/assets/projects-screenshots/msl-manager-screenshot.png",
+        "tools": ["dart", "flutter", "firebase", "javascript"]
+    },
+    {
+        "id": "4",
+        "name": "Python Manager",
+        "description": "A password manager made in Python with Tkinter",
+        "imgPath": "/assets/projects-screenshots/python-manager-screenshot.png",
+        "tools": ["python"]
+    },
+    {
+        "id": "5",
+        "name": "Mavaquatics",
+        "description": "Part of my Software Engineer semester long project, Mavaquatics is a dashboard for swimmers, professor and parents",
+        "imgPath": "/assets/projects-screenshots/mavaquatics-screenshot.png",
+        "tools": ["flutter", "dart" ,"firebase"]
     }
 ]

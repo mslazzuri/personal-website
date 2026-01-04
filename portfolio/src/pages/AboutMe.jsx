@@ -31,7 +31,7 @@ function AboutMe() {
                     <li><span>College:</span>Colorado Mesa University</li>
                     <li><span>Interests</span>Music, soccer, good food and new places</li>
                     <li><span>Languages:</span>Portuguese, English, Spanish</li>
-                    <li><span>Goal:</span>Get a position as a Junior Developer</li>
+                    <li><span>Goal:</span>To enjoy the process</li>
                     <li><span>Location:</span>Kissimmee, FL. Willing to realloacte</li>
                     <li><span>Availability:</span>January 2026</li>
                 </ul>
