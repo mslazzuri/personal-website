@@ -1,6 +1,9 @@
 import '../styles/ProjectCard.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
-function ProjectCard({title, imgPath, description, tools}) {
+function ProjectCard({title, imgPath, description, tools, gitLink, liveLink}) {
     
     function mapTool(tool) {
         return new URL(`../assets/icons/${tool}.png`, import.meta.url).href;
@@ -16,27 +19,40 @@ function ProjectCard({title, imgPath, description, tools}) {
         <>
         <div className="project-card">
             <img src={imgPath} alt="project-img" className="project-img"/>
-            <div className='project-title'>{title}</div>
+            <div className='project-title'>
+                {title}
+                <div className='links-button'>
+                    {   gitLink && (
+                            <>
+                            <a href={gitLink}>
+                                <FontAwesomeIcon icon={faGithub} />
+                            </a>
+                            </>
+                        )
+                    }
+                    {
+                        liveLink && (
+                            <>
+                                <a href={liveLink}>
+                                    <FontAwesomeIcon icon={faGlobe} />
+                                </a>
+                            </>
+                        )
+                    }
+                </div>
+            </div>
             <p className="description">{description}</p>
             <div className='tools-used'>
                 {tools.map((tool) => (
                     <>
-                        <div style={{
-                            display: "flex",
-                            justifyContent: "center",
-                            alignItems: "center",
-                            flexDirection: "row",
-                            padding: "5px",
-                            gap: "5px",
-                            fontSize: "8pt"
-
-                        }}>
+                        <div className='skills-row'>
                         <img src={mapTool(tool)} className='tool' />
                         <p>{formalize(tool)}</p>
                         </div>
                     </>
                 ))}
             </div>
+            
         </div>
         </>
     );

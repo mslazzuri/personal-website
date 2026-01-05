@@ -1,7 +1,9 @@
-import React, { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import ProjectCard from "../components/ProjectCards";
 import projects from '../projects.json';
 import '../styles/Projects.css';
+
+import { motion, useTransform, useScroll } from 'framer-motion';
 
 function Projects() {
     const scrollRef = useRef(null);
@@ -48,11 +50,13 @@ function Projects() {
                             imgPath={project.imgPath}
                             description={project.description}
                             tools={project.tools}
+                            gitLink={project.gitLink}
+                            liveLink={project.liveLink}
                         />
                     ))}
                 </div>
             </div>
-
+        
             {/* MOBILE */}
             <div className="project-cards-row mobile-scroll" ref={scrollRef}>
                 {projects.map((project) => (
@@ -63,6 +67,8 @@ function Projects() {
                         imgPath={project.imgPath}
                         description={project.description}
                         tools={project.tools}
+                        gitLink={project.gitLink}
+                        liveLink={project.liveLink}
                     />
                 ))}
             </div>
