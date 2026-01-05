@@ -22,12 +22,12 @@ function ProjectCard({title, imgPath, description, tools, gitLink, liveLink, ...
                 {title}
                 <div className='links-button'>
                     {gitLink && (
-                        <a href={gitLink}>
+                        <a className="github" href={gitLink}>
                             <FontAwesomeIcon icon={faGithub} />
                         </a>
                     )}
                     {liveLink && (
-                        <a href={liveLink}>
+                        <a className="livelink" href={liveLink}>
                             <FontAwesomeIcon icon={faGlobe} />
                         </a>
                     )}
@@ -38,7 +38,7 @@ function ProjectCard({title, imgPath, description, tools, gitLink, liveLink, ...
                 {tools.map((tool) => (
                     <div className='skills-row' key={tool}>
                         <img src={mapTool(tool)} className='tool' alt={tool} />
-                        <p>{formalize(tool)}</p>
+                        <p style={{fontWeight: "500"}}>{formalize(tool)}</p>
                     </div>
                 ))}
             </div>

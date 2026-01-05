@@ -9,14 +9,20 @@
     border-radius: 10px;
     flex: 0 0 320px;
     min-width: 30%;
-    height: 500px; 
+    height: 550px; 
     padding: 10px;
     box-shadow: 15px 15px var(--darkBlue);
     box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover { 
+    transform: translateX(-5px) translateY(-5px); 
+    box-shadow: 12px 12px var(--darkBlue);
 }
 
 .project-title {
-    font-size: 14pt;
+    font-size: 16pt;
     color: var(--darkBlue);
     margin: 0 0 8px;
     text-align: left;
@@ -64,8 +70,8 @@
 }
 
 .tool {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     object-fit: contain;
 }
 
@@ -74,8 +80,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    padding: 5px;
-    gap: 0;
+    padding: 3px;
+    gap: 3px;
     font-size: 10pt;
 }
 
@@ -84,20 +90,23 @@
     justify-content: center;
     align-items: center;
     margin-left: auto;
+    gap: 5px
 }
 
 .links-button a {
     border: none;
-    padding: 0;
-    font-size: 15pt;
+    padding: 0px 5px;
+    font-size: 14pt;
     font-weight: 700;
-    border-radius: 10px;
-    background-color: transparent;
-    color: var(--black);
+    border-radius: 5px;
     text-decoration: none;
+    color: var(--backgroundColor)
 }
+.links-button a.github { background-color: var(--black);  }
+.links-button a.livelink { background-color: var(--darkBlue); }
 
-.links-button a:hover { color: var(--lightBlue); }
+.links-button a.github:hover { background-color: rgba(0.0, 0.0, 0.0, 0.5); }
+.links-button a.livelink:hover { background-color: var(--lightBlue) }
 
 @media screen and (max-width: 768px) {
     .project-card {
@@ -105,6 +114,7 @@
         flex: 0 0 280px;
         height: auto;
     }
+    .project-card:hover { transform: none; box-shadow: 15px 15px var(--darkBlue); }
     .project-img { height: 160px; }
     .tools-used { line-height: 0px; } 
     .tool { width: 20px; height: 20px; }
