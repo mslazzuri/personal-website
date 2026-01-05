@@ -6,6 +6,9 @@ import '../styles/Projects.css';
 function Projects() {
     const scrollRef = useRef(null);
     const [active, setActive] = useState(0);
+    const [isDragging, setIsDragging] = useState(false);
+    const [startX, setStartX] = useState(0);
+    const [scrollLeft, setScrollLeft] = useState(0);
 
     useEffect(() => {
         const el = scrollRef.current;
@@ -42,11 +45,46 @@ function Projects() {
         el.scrollTo({ left: i * cardWidth, behavior: 'smooth' });
     };
 
+    const handleMouseDown = (e) => {
+        setIsDragging(true);
+        setStartX(e.pageX - scrollRef.current.offsetLeft);
+        setScrollLeft(scrollRef.current.scrollLeft);
+        scrollRef.current.style.cursor = 'grabbing';
+    };
+
+    const handleMouseMove = (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX - scrollRef.current.offsetLeft;
+        const walk = (x - startX) * 2; // Multiply for faster scrolling
+        scrollRef.current.scrollLeft = scrollLeft - walk;
+    };
+
+    const handleMouseUp = () => {
+        setIsDragging(false);
+        scrollRef.current.style.cursor = 'grab';
+    };
+
+    const handleMouseLeave = () => {
+        if (isDragging) {
+            setIsDragging(false);
+            scrollRef.current.style.cursor = 'grab';
+        }
+    };
+
     return (
         <>
             <h3>projects</h3>
 
-            <div className="project-cards-row" ref={scrollRef}>
+            <div 
+                className="project-cards-row" 
+                ref={scrollRef}
+                onMouseDown={handleMouseDown}
+                onMouseMove={handleMouseMove}
+                onMouseUp={handleMouseUp}
+                onMouseLeave={handleMouseLeave}
+                style={{ cursor: 'grab' }}
+            >
                 {projects.map((project, index) => (
                     <ProjectCard
                         key={index}

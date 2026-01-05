@@ -12,6 +12,7 @@
     padding-bottom: 15px;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
+    user-select: none;
 }
 .project-cards-row .project-card {
     scroll-snap-align: center;
