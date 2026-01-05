@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
-function ProjectCard({title, imgPath, description, tools, gitLink, liveLink}) {
+function ProjectCard({title, imgPath, description, tools, gitLink, liveLink, ...props}) {
     
     function mapTool(tool) {
         return new URL(`../assets/icons/${tool}.png`, import.meta.url).href;
@@ -16,45 +16,33 @@ function ProjectCard({title, imgPath, description, tools, gitLink, liveLink}) {
     }
     
     return(
-        <>
-        <div className="project-card">
+        <div className="project-card" {...props}>
             <img src={imgPath} alt="project-img" className="project-img"/>
             <div className='project-title'>
                 {title}
                 <div className='links-button'>
-                    {   gitLink && (
-                            <>
-                            <a href={gitLink}>
-                                <FontAwesomeIcon icon={faGithub} />
-                            </a>
-                            </>
-                        )
-                    }
-                    {
-                        liveLink && (
-                            <>
-                                <a href={liveLink}>
-                                    <FontAwesomeIcon icon={faGlobe} />
-                                </a>
-                            </>
-                        )
-                    }
+                    {gitLink && (
+                        <a href={gitLink}>
+                            <FontAwesomeIcon icon={faGithub} />
+                        </a>
+                    )}
+                    {liveLink && (
+                        <a href={liveLink}>
+                            <FontAwesomeIcon icon={faGlobe} />
+                        </a>
+                    )}
                 </div>
             </div>
             <p className="description">{description}</p>
             <div className='tools-used'>
                 {tools.map((tool) => (
-                    <>
-                        <div className='skills-row'>
-                        <img src={mapTool(tool)} className='tool' />
+                    <div className='skills-row' key={tool}>
+                        <img src={mapTool(tool)} className='tool' alt={tool} />
                         <p>{formalize(tool)}</p>
-                        </div>
-                    </>
+                    </div>
                 ))}
             </div>
-            
         </div>
-        </>
     );
 }
 

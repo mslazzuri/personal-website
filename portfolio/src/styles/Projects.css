@@ -17,32 +17,7 @@
     scroll-snap-align: center;
 }
 
-/* Marquee (desktop) */
-.project-cards-marquee {
-    display: none; /* shown on larger screens via media query below */
-    overflow: hidden;
-    margin-top: 50px;
-    padding-top: 10px;
-    padding-bottom: 15px;
-}
-.marquee-track {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    /* duplicate items are rendered in JS; animate a full half loop (translateX -50%) */
-    animation: marquee 30s linear infinite;
-    will-change: transform;
-}
-.marquee-track:hover {
-    animation-play-state: paused;
-}
-@keyframes marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); } /* because items are duplicated */
-}
-
-/* Dots (mobile) */
-.mobile-dots {
+.index-dots {
     display: flex;
     justify-content: center;
     gap: 8px;
@@ -53,22 +28,18 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: rgba(0,0,0,0.15);
+    background-color: rgba(0,0,0,0.15);
     border: none;
     padding: 0;
     cursor: pointer;
 }
 .dot.active {
-    background: var(--darkBlue);
+    background-color: var(--darkBlue);
 }
 
 @media screen and (min-width: 768px) {
-    .project-cards-marquee { display: block; }
-    .mobile-scroll { display: none; }
-    .mobile-dots { display: none; }
+    .index-dots { display: none; }
 }
 @media screen and (max-width: 767px) {
-    .project-cards-marquee { display: none; }
-    .mobile-scroll { display: flex; }
-    .mobile-dots { display: flex; }
+    .index-dots { display: flex; }
 }
