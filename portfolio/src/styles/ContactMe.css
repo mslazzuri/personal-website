@@ -1,0 +1,58 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.contact-panels {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.left-pannel {
+    flex: 1;
+    text-align: left;
+    line-height: 0;
+}
+
+.right-pannel {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16pt;
+    font-weight: 600;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .contact-container {
+        padding: 0;
+    }
+    .contact-panels { flex-direction: column; }
+    .contact-info { 
+        justify-content: center; 
+        flex-direction: column;
+        font-size: 12pt;
+        text-align: right;
+        align-items: flex-end;
+        line-height: 0;
+    }
+    .left-pannel {
+        font-size: 10pt;
+        color: #444;
+    }
+}
