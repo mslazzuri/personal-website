@@ -34,6 +34,15 @@
     padding: 8px 0;
     font-size: 12pt;
     font-family: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+}
+
+.form-field select {
+    cursor: pointer;
+    background-image: none;
 }
 
 .form-field input:focus,
@@ -46,10 +55,6 @@
 .form-field textarea {
     resize: vertical;
     min-height: 60px;
-}
-
-.form-field select {
-    cursor: pointer;
 }
 
 .submit-btn {
