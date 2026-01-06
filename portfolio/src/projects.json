@@ -5,7 +5,7 @@
         "description": "An Integrated Management System for Quantum13, a network solutions company. It replaces internal Excel-based workflows with role-based access control, project management tools, live client dashboards, and data visualization.",
         "imgPath": "/assets/projects-screenshots/quantum13-screenshot.png",
         "tools": ["flutter", "dart", "firebase", "javascript"],
-        "gitLink": "https://github.com/mslazzuri"
+        "liveLink": "https://gestao-instalacao.web.app"
     },
     {
         "id": "2",
@@ -13,7 +13,8 @@
         "description": "A website that teaches how to play Truco, a popular Brazilian card game. I built it to help my friends learn the rules and strategies.",
         "imgPath": "/assets/projects-screenshots/seccotruco-screenshot.png",
         "tools": ["react", "html", "css", "javascript"],
-        "gitLink": "https://github.com/mslazzuri"
+        "gitLink": "https://github.com/mslazzuri/truco_counter",
+        "liveLink": "https://www.seccotruco.com"
     },
     {
         "id": "3",
@@ -21,8 +22,7 @@
         "description": "A desktop password manager for macOS that uses cryptography to securely store passwords. Built while learning Firebase for backend integration.",
         "imgPath": "/assets/projects-screenshots/msl-manager-screenshot.png",
         "tools": ["dart", "flutter", "firebase", "javascript"],
-        "gitLink": "https://github.com/mslazzuri",
-        "liveLink": "https://github.com/mslazzuri"
+        "gitLink": "https://github.com/mslazzuri/msl-manager"
     },
     {
         "id": "4",
@@ -30,8 +30,7 @@
         "description": "A desktop password manager with a GUI built using Python and Tkinter. Developed as my first password manager for an Operating Systems class project.",
         "imgPath": "/assets/projects-screenshots/python-manager-screenshot.png",
         "tools": ["python"],
-        "gitLink": "https://github.com/mslazzuri",
-        "liveLink": "https://github.com/mslazzuri"
+        "gitLink": "https://github.com/mslazzuri/PasswordManager-Python"
     },
     {
         "id": "5",
@@ -39,7 +38,7 @@
         "description": "A centralized platform for swimmers, coaches, and parents to interact and collaborate. Features role-based access control and was developed as a semester-long Software Engineering project.",
         "imgPath": "/assets/projects-screenshots/mavaquatics-screenshot.png",
         "tools": ["flutter", "dart" ,"firebase"],
-        "gitLink": "https://github.com/mslazzuri",
-        "liveLink": "https://github.com/mslazzuri"
+        "gitLink": "https://github.com/mslazzuri/mavaquatics",
+        "liveLink": "https://mavaquatics2025.web.app/"
     }
 ]

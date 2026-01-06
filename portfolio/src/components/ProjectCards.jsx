@@ -22,12 +22,12 @@ function ProjectCard({title, imgPath, description, tools, gitLink, liveLink, ...
                 {title}
                 <div className='links-button'>
                     {gitLink && (
-                        <a className="github" href={gitLink}>
+                        <a className="github" href={gitLink} target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faGithub} />
                         </a>
                     )}
                     {liveLink && (
-                        <a className="livelink" href={liveLink}>
+                        <a className="livelink" href={liveLink} target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faGlobe} />
                         </a>
                     )}
