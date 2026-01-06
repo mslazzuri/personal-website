@@ -32,7 +32,7 @@ function ContactMe() {
                     <a href="http://www.linkedin.com/in/matheuslazzuri" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     <a href="https://github.com/mslazzuri" target="_blank" rel="noopener noreferrer">GitHub</a>
                     <a href="https://www.instagram.com/matheus_secco" target="_blank" rel="noopener noreferrer">Instagram</a>
-                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                    <a href="/portfolio/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
                 </div>
             </div>      
             
