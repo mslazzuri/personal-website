@@ -2,6 +2,7 @@ import { useState } from 'react';
 import '../styles/AppBar.css'
 import { useEffect } from 'react';
 
+// AppBar
 function AppBar () {
     const [activeId, setActiveId] = useState(null);
 
