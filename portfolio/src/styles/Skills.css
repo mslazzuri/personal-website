@@ -11,6 +11,7 @@
 
 .right-side {
     width: 50vw;
+    padding-right: 5vw;
     height: auto;
     right: 0;
     text-align: justify;

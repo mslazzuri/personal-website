@@ -28,6 +28,12 @@ function ContactMe() {
                     <p>matheussecco2@gmail.com</p>
                     <p>+1 (970) 914-2475</p>
                 </div>
+                <div className="references">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">GitHub</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Resume</a>
+                </div>
             </div>      
             
         </>
