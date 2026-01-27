@@ -32,16 +32,3 @@ body {
   padding-top: calc(var(--appbar-height) + 25px);
   scroll-margin-top: var(--appbar-height);
 }
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
