@@ -1,47 +1,21 @@
-.project-cards-row {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    margin-top: 50px;
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 40px;
     width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    flex-wrap: nowrap;
-    -webkit-overflow-scrolling: touch;
-    padding-top: 10px;
-    padding-bottom: 15px;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    user-select: none;
-    padding-right: 20px;
-}
-.project-cards-row .project-card {
-    scroll-snap-align: center;
 }
 
-.index-dots {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 12px;
-    margin-bottom: 20px;
-}
-.dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: rgba(0,0,0,0.15);
-    border: none;
-    padding: 0;
-    cursor: pointer;
-}
-.dot.active {
-    background-color: var(--darkBlue);
+/* ── Responsive breakpoints ──────────────────────────────── */
+@media screen and (max-width: 1024px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-@media screen and (min-width: 768px) {
-    .index-dots { display: none; }
-}
-@media screen and (max-width: 767px) {
-    .index-dots { display: flex; }
+@media screen and (max-width: 600px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }

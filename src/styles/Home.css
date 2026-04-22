@@ -1,11 +1,14 @@
 h1 {
   color: var(--darkBlue);
-  font-size: 36pt;
+  font-size: 32pt;
+  font-weight: 800;
 }
 
 h2 {
-  color: var(--lightBlue);
-  font-size: 24pt;
+  color: var(--black);
+  font-size: 21pt;
+  font-weight: 300;
+  letter-spacing: 0.08em;
 }
 
 .coffeeGIF {
@@ -14,24 +17,30 @@ h2 {
 }
 
 .home-button {
-  background-color: var(--darkBlue);
-  cursor: pointer;
-  border: none;
-  padding: 10px;
-  color: var(--backgroundColor);
-  border-radius: 10px;
-  box-shadow: 4px 4px var(--lightBlue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(74, 112, 169, 0.35);
+  color: var(--darkBlue);
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s, background-color 0.2s;
 }
 
-i { font-size: 18pt; }
-.home-button:hover { color: var(--lightBlue); }
-.home-button:active {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px var(--lightBlue);
+i { font-size: 16pt; }
+
+.home-button:hover {
+  border-color: var(--darkBlue);
+  background-color: var(--darkBlue);
+  color: var(--backgroundColor);
 }
+
+.home-button:active { opacity: 0.75; }
 
 @media screen and (max-width: 768px) {
-  h1 { font-size: 20pt; }
-  h2 { font-size: 14pt; }
+  h1 { font-size: 22pt; }
+  h2 { font-size: 15pt; }
   .coffeeGIF { max-width: 200px; }
 }

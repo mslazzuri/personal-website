@@ -9,6 +9,14 @@
     },
     {
         "id": "2",
+        "name": "PriXplainer Browser Extension",
+        "description": "ConsenTerra's browser extension utilizes an AI model to analyze and grade privacy policies. Simply open the extension, and find out what companies are doing with your data.",
+        "imgPath": "/portfolio/assets/projects-screenshots/prixplainer-screenshot.png",
+        "tools": ["html", "css", "javascript"],
+        "liveLink": "https://chromewebstore.google.com/detail/prixplainer-privacy-risk/ngfdbpkbcaaneaiakdhaceikccpmhadl"
+    },
+    {
+        "id": "3",
         "name": "Seccotruco.com",
         "description": "A website that teaches how to play Truco, a popular Brazilian card game. I built it to help my friends learn the rules and strategies.",
         "imgPath": "/portfolio/assets/projects-screenshots/seccotruco-screenshot.png",
@@ -17,7 +25,7 @@
         "liveLink": "https://www.seccotruco.com"
     },
     {
-        "id": "3",
+        "id": "4",
         "name": "MSL Manager",
         "description": "A desktop password manager for macOS that uses cryptography to securely store passwords. Built while learning Firebase for backend integration.",
         "imgPath": "/portfolio/assets/projects-screenshots/msl-manager-screenshot.png",
@@ -25,7 +33,7 @@
         "gitLink": "https://github.com/mslazzuri/msl-manager"
     },
     {
-        "id": "4",
+        "id": "5",
         "name": "Python Manager",
         "description": "A desktop password manager with a GUI built using Python and Tkinter. Developed as my first password manager for an Operating Systems class project.",
         "imgPath": "/portfolio/assets/projects-screenshots/python-manager-screenshot.png",
@@ -33,7 +41,7 @@
         "gitLink": "https://github.com/mslazzuri/PasswordManager-Python"
     },
     {
-        "id": "5",
+        "id": "6",
         "name": "Mavaquatics",
         "description": "A centralized platform for swimmers, coaches, and parents to interact and collaborate. Features role-based access control and was developed as a semester-long Software Engineering project.",
         "imgPath": "/portfolio/assets/projects-screenshots/mavaquatics-screenshot.png",

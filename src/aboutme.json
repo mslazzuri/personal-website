@@ -1,0 +1,39 @@
+{
+  "name": "Matheus Secco Lazzuri",
+  "title": "Software Developer",
+  "summary": "I build things and love watching them come to life. Moved from Brazil to the US at 16 on my own — earned a soccer scholarship at Colorado Mesa University and graduated with a B.S. in Computer Science. Driven by curiosity, continuous learning, and the satisfaction of shipping software that actually helps people.",
+  "contact": {
+    "email": "matheussecco2@gmail.com",
+    "phone": "+1 (970) 914-2475",
+    "location": "Kissimmee, FL",
+    "linkedin": "http://www.linkedin.com/in/matheuslazzuri",
+    "github": "https://github.com/mslazzuri"
+  },
+  "languages": ["Portuguese", "English", "Spanish"],
+  "interests": ["Soccer", "Music", "Travel", "Good food", "Movies"],
+  "availability": "Open to opportunities",
+  "education": [
+    {
+      "degree": "B.S. Computer Science",
+      "school": "Colorado Mesa University",
+      "location": "Grand Junction, CO",
+      "period": "2021 - 2025"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Software Engineer • Full Stack",
+      "company": "Q13",
+      "period": "2024 - 2025",
+      "current": false,
+      "description": "Worken on development of an Integrated Management System to replace excel-based workflows within the company."
+    },
+    {
+      "title": "Software Engineer",
+      "company": "ConsenTerra",
+      "period": "2026 - Present",
+      "current": true,
+      "description": "Working on the company's website, client dashboards and browser extension. Helped growing the company's AI product."
+    }
+  ]
+}

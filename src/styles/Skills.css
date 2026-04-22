@@ -1,58 +1,64 @@
-.skills-page-divided-pannel {
-    display: flex;
-    flex-direction: row;
+/* ── Flat centered icon grid ─────────────────────────────── */
+.skills-icon-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px 16px;
+    justify-items: center;
+    margin-top: 8px;
+    width: 100%;
 }
 
-.left-side {
-    width: 50vw;
-    height: auto;
-    left: 0;
-}
-
-.right-side {
-    width: 50vw;
-    padding-right: 5vw;
-    height: auto;
-    right: 0;
-    text-align: justify;
-}
-
-.skills-sections {
+.skill-tile {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    gap: 8px;
 }
 
-.section-title {
+.skill-icon-box {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.skill-icon-img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.skill-icon-img:hover {
+    transform: scale(1.2);
+}
+
+.skill-icon-placeholder {
+    font-size: 16px;
+    font-weight: 700;
     color: var(--darkBlue);
+    opacity: 0.45;
+}
+
+.skill-name {
+    font-size: 11px;
     font-weight: 500;
-    font-size: 18pt;
+    color: var(--black);
+    text-align: center;
+    white-space: nowrap;
 }
 
-.skills-list {
-    display: grid;
-    gap: 10px;
-    row-gap: 0;
-    margin-bottom: 25px;
-}
-
-.skill-item {
-    border: 1px solid var(--black);
-    border-radius: 30px;
-    padding: 0 10px;
-    min-width: 25px;
+/* ── Responsive ──────────────────────────────────────────── */
+@media screen and (max-width: 1024px) {
+    .skills-icon-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media screen and (max-width: 768px) {
-    .skills-list {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 10px;
-        row-gap: 0;
-    }
+    .skills-icon-grid { grid-template-columns: repeat(2, 1fr);  }
+}
 
-    .skills-page-divided-pannel {     flex-direction: column; }
-    .left-side { width: 100%; }
-    .right-side { width: 100%; }
+@media screen and (max-width: 400px) {
+    .skills-icon-grid { grid-template-columns: repeat(2, 1fr); }
 }

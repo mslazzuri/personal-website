@@ -1,16 +1,7 @@
 [
     {
-        "foundations": ["C","C++","Python"],
-        "web development": ["JavaScript", "React.JS", "Dart", "Flutter"],
-        "databases": ["NoSQL", "Firebase", "Postgres"],
-        "version control": ["Git", "GitHub", "GitLab"],
-        "other": ["Three.JS", "TKinter", "openCV"],
-        "soft skills": ["Leadership", "Self-driven", "Quick learner"]
-    },
-    {
-        "p1": "My programming journey started when I was young. I was about 8 years old when I had a robotics class at school, where we used some software (I don't recall which) to program little robots with motors, to do basic things. It was one of those click-and-drag blocks diagrams softwares, similar to scratch. I loved it. However, after being done with the class, I did not have much contact with any sort of programming until college, although I was always curious about computers and how they worked.",
-        "p2": "Already in college, and enrolled as a Business student, I was not happy with the business classes I was taking. In fact, I had considered enrolling as a Computer Science major, but unsureness took me to bussiness. That went on until my second semester in college, when I finally took a class named 'Computers in our Society'. Professor Bergen made me fall in love with computers, and that was the turning point, when I decided to change my major to Computer Science.",
-        "p3": "So, I began. C and C++ where my foundation. All of the low-level classes were taught in C++, and some embedded programming done with Arduino in C. I loved it. I started to enjoy going to classes and watching lectures again. Later on, after knowing some of the basics about programming, I started to research and learn on my own some Python, and even wrote some scripts. Then, I began to have lectures in Python, and took OOP, for example, in Python.",
-        "p4": "More recently, I have been doing a lot of web development. First, I learned the Flutter stack. Currently, I am learning React.js, But what all of that have in common is JavaScript, which is essential. I finally graduated with a Bachelor's in Computer Science, and feel ready for the industry!"
+        "foundations": ["C","C++","Python", "HTML", "CSS"],
+        "web development": ["JavaScript", "React.JS", "Flutter"],
+        "databases": ["Firebase", "Supabase"]
     }
 ]

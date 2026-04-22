@@ -1,3 +1,4 @@
+/* ── Top bar ─────────────────────────────────────────────── */
 .appbar-container {
     position: fixed;
     width: 100vw;
@@ -13,48 +14,129 @@
     padding: 0 24px;
 }
 
-.appbar-container .links {
-    right: 0;
-    display: flex;
-    padding: 10px 0;
-    gap: 25px;
-    padding-right: 25px;
-}
-
-.appbar-container .links li { list-style-type: none; }
-
-.appbar-container .links li a {
-    text-decoration: none;
-    cursor: pointer;
-    color: var(--black);
-    font-size: 16pt;
-}
-
-.appbar-container .links li a:hover { color: var(--lightBlue); }
-.appbar-container .links li a.active { color: var(--darkBlue); }
-
 .appbar-container .msl-logo {
     color: var(--darkBlue);
     font-size: 24pt;
     font-weight: 800;
-    padding-left: 25px;
 }
 
+/* ── Desktop nav ─────────────────────────────────────────── */
+.desktop-nav {
+    display: flex;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.desktop-nav li { list-style: none; }
+
+.desktop-nav li a {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--black);
+    font-size: 13pt;
+}
+
+.desktop-nav li a:hover  { color: var(--lightBlue); }
+.desktop-nav li a.active { color: var(--darkBlue); }
+
+/* ── Hamburger (mobile only) ─────────────────────────────── */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 10001;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--darkBlue);
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    transform-origin: center;
+}
+
+.hamburger .bar.open:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger .bar.open:nth-child(2) { opacity: 0; }
+.hamburger .bar.open:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Backdrop ────────────────────────────────────────────── */
+.drawer-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 9998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.drawer-backdrop.visible {
+    opacity: 1;
+}
+
+/* ── Left drawer ─────────────────────────────────────────── */
+.drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    background-color: var(--backgroundColor);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 28px;
+    box-sizing: border-box;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    border-right: 1px solid rgba(74, 112, 169, 0.15);
+}
+
+.drawer.drawer-open {
+    transform: translateX(0);
+}
+
+.drawer-logo {
+    color: var(--darkBlue);
+    font-size: 26pt;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.drawer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.drawer-links li a {
+    display: block;
+    text-decoration: none;
+    font-size: 15pt;
+    color: var(--black);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(74, 112, 169, 0.1);
+    transition: color 0.2s;
+}
+
+.drawer-links li a:hover  { color: var(--lightBlue); }
+.drawer-links li a.active { color: var(--darkBlue); font-weight: 600; }
+
+/* ── Mobile: show hamburger, hide desktop nav ────────────── */
 @media screen and (max-width: 768px) {
-    .appbar-container .msl-logo { display: none; }
-
-    /* center the whole bar and remove extra padding on both sides */
-    .appbar-container { justify-content: center; padding: 0; }
-
-    .appbar-container .links li a { font-size: 10pt; }
-
-    /* make sure links are centered and don't inherit right:0 */
-    .appbar-container .links {
-        position: static;
-        right: auto;
-        margin: 0 auto;
-        padding: 0;
-        gap: 8px;
-        padding-right: 0;
-    }
+    .desktop-nav       { display: none; }
+    .hamburger         { display: flex; }
+    .drawer-backdrop   { display: block; }
 }

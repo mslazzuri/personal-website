@@ -1,43 +1,94 @@
-import myPicture from "../assets/myPic.png"
+import myPicture from "../assets/myPic.png";
 import '../styles/AboutMe.css';
+import data from '../aboutme.json';
 
 function AboutMe() {
     return (
         <>
-            <h3>about:me</h3>
-            <div className='side-to-side'>
-                <img src={myPicture} alt="Me" className="myPic"/>
-                <p className="halfp">
-                    Hello, I'm Matheus, a Software Developer who loves creating new things and seeing them come to life.
-                    <br />
-                    <br />
-                    I was born and raised in São Paulo, Brazil. At 16, I moved to the U.S. on my own with the goal of studying abroad. After graduating from high school, I earned a scholarship to Colorado Mesa University as a student-athlete for soccer, where I completed both my academic and athletic journey and graduated with a Bachelor’s degree in Computer Science.
-                    <br />
-                    <br />
-                    I believe programming is a field where there's always room to grow and always something new to learn. I see that as a strength. I'm constantly learning and open to new challenges. What truly drives me is seeing people use something I've built and knowing it's helpful to them.
-                    <br />
-                    <br />
-                    When I'm not coding, I enjoy stepping away from my desk. I like staying active through sports, watching movies, and spending time with friends. I also believe getting outside and enjoying some sunlight is important for the mind, body, and spirit.
-                    <br />
-                    <br />
-                    I'm currently seeking an entry-level or junior position in the industry. Let's connect!</p>
-            </div>
-            <hr />
-            <div className="interests">
-                <ul>
-                    <li><span>Age:</span>23</li>
-                    <li><span>Made in:</span>Brazil</li>
-                    <li><span>Degree:</span>Bachelor's of Computer Science</li>
-                    <li><span>College:</span>Colorado Mesa University</li>
-                    <li><span>Interests</span>Music, soccer, good food and new places</li>
-                    <li><span>Languages:</span>Portuguese, English, Spanish</li>
-                    <li><span>Goal:</span>To enjoy the process</li>
-                    <li><span>Location:</span>Kissimmee, FL. Willing to realloacte</li>
-                    <li><span>Availability:</span>January 2026</li>
-                </ul>
+            {/* <h3>about:me</h3> */}
+            <div className="about-layout">
+
+                {/* ── Left column ── */}
+                <div className="about-left">
+                    <img src={myPicture} alt="Matheus" className="about-photo" />
+
+                    <div className="about-meta">
+                        {[
+                            { label: 'location', value: data.contact.location },
+                            { label: 'email',    value: data.contact.email, href: `mailto:${data.contact.email}` },
+                            { label: 'phone',    value: data.contact.phone },
+                            { label: 'status',   value: data.availability },
+                        ].map(({ label, value, href }) => (
+                            <div key={label} className="meta-group">
+                                <span className="meta-label">{label}</span>
+                                {href
+                                    ? <a className="meta-value meta-link" href={href}>{value}</a>
+                                    : <span className="meta-value">{value}</span>
+                                }
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="about-section-block">
+                        <span className="block-label">languages</span>
+                        <div className="chip-row">
+                            {data.languages.map(l => <span key={l} className="chip">{l}</span>)}
+                        </div>
+                    </div>
+
+                    <div className="about-section-block">
+                        <span className="block-label">interests</span>
+                        <div className="chip-row">
+                            {data.interests.map(i => <span key={i} className="chip">{i}</span>)}
+                        </div>
+                    </div>
+                </div>
+
+                {/* ── Right column ── */}
+                <div className="about-right">
+                    <div className="about-heading">
+                        <h1 className="about-name">{data.name}</h1>
+                        <span className="about-title">{data.title}</span>
+                    </div>
+
+                    <hr className="about-divider" />
+
+                    <p className="about-summary">{data.summary}</p>
+
+                    <hr className="about-divider" />
+
+                    <div className="about-section">
+                        <span className="section-label">education</span>
+                        {data.education.map((edu, i) => (
+                            <div key={i} className="entry-block">
+                                <span className="entry-period">{edu.period} · {edu.location}</span>
+                                <span className="entry-title">{edu.degree}</span>
+                                <span className="entry-sub">{edu.school}</span>
+                            </div>
+                        ))}
+                    </div>
+
+                    <hr className="about-divider" />
+
+                    <div className="about-section">
+                        <span className="section-label">experience</span>
+                        {data.experience.map((exp, i) => (
+                            <div key={i} className="entry-block">
+                                <div className="entry-period-row">
+                                    <span className="entry-period">{exp.period}</span>
+                                </div>
+                                <span className="entry-title">{exp.company}</span>
+                                <span className="entry-sub">{exp.title}</span>
+                                <p className="entry-desc">{exp.description}</p>
+                                {exp.current && <span className="current-badge">current</span>}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
             </div>
         </>
     );
 }
 
-export default AboutMe
+export default AboutMe;

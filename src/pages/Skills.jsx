@@ -1,48 +1,55 @@
 import "../styles/Skills.css";
 import skills from '../skills.json';
-import { p } from "framer-motion/client";
+
+const skillsData = skills[0];
+
+const iconMap = {
+    'C':          'c',
+    'C++':        'c++',
+    'Python':     'python',
+    'JavaScript': 'javascript',
+    'React.JS':   'react',
+    'Dart':       'dart',
+    'Flutter':    'flutter',
+    'HTML':       'html',
+    'Firebase':   'firebase',
+    'Git':        null,
+    'GitHub':     null,
+    'Three.JS':   'threejs',
+    'CSS':        'css',
+    'Supabase':   'supabase'
+};
+
+function getIcon(skill) {
+    const key = iconMap[skill];
+    if (!key) return null;
+    return new URL(`../assets/icons/${key}.png`, import.meta.url).href;
+}
+
+const allSkills = Object.values(skillsData).flat().filter(s => s);
 
 function Skills() {
-    const skillsData = skills[0];
-    const history = skills[1];
-
-    function formalize(text) {
-        let formalized = text[0].toUpperCase();
-        formalized += text.slice(1);
-        return formalized.replace(/[-_]/g, ' ');
-    }
-
     return (
         <>
             <h3>skills</h3>
-            
-            <div className="skills-page-divided-pannel">
-                <div className="left-side">
-                    <div className="skills-sections">
-                        {Object.entries(skillsData).map(([sectionTitle, sectionSkills]) => (
-                            <div key={sectionTitle} className="skill-section">
-                                <div className='section-title'>{formalize(sectionTitle)}</div>
-                                <div 
-                                    className="skills-list"
-                                    style={{gridTemplateColumns: `repeat(${sectionSkills.length % 10}, 1fr)`}}
-                                >
-                                    {sectionSkills.map((skill, index) => (
-                                        skill && <p key={index} className="skill-item">{skill}</p>
-                                    ))}
-                                </div>
+            <div className="skills-icon-grid">
+                {allSkills.map(skill => {
+                    const icon = getIcon(skill);
+                    return (
+                        <div key={skill} className="skill-tile">
+                            <div className="skill-icon-box">
+                                {icon
+                                    ? <img src={icon} alt={skill} className="skill-icon-img" />
+                                    : <span className="skill-icon-placeholder">{skill.slice(0, 2).toUpperCase()}</span>
+                                }
                             </div>
-                        ))}
-                    </div>
-                </div>
-                <div className="right-side">
-                    {
-                        Object.entries(history).map(([paragraph, text]) => (
-                            <p>{text}</p>
-                        ))}
-                </div>
-            </div> 
+                            <span className="skill-name">{skill}</span>
+                        </div>
+                    );
+                })}
+            </div>
         </>
     );
 }
 
-export default Skills
+export default Skills;

@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "date": "2019",
+    "title": "Leaving Brazil",
+    "subtitle": "Soccer scholarship & new beginnings",
+    "description": "Left Brazil to pursue a soccer scholarship and academic opportunities in the United States, chasing both sport and a new life.",
+    "type": "life"
+  },
+  {
+    "id": 2,
+    "date": "2021 - 2025",
+    "title": "Colorado Mesa University",
+    "subtitle": "B.S. Computer Science · Grand Junction, CO",
+    "description": "Played college soccer while earning a degree in Computer Science. Balanced competitive athletics with a growing passion for software engineering.",
+    "type": "education"
+  },
+  {
+    "id": 3,
+    "date": "2024 - 2025",
+    "title": "Q13",
+    "subtitle": "Software Engineer • Full Stack",
+    "description": "Joined Q13 alongside my studies to develop an Integrated Management System that would help replace the company's excel-based workflow.",
+    "type": "work"
+  },
+  {
+    "id": 4,
+    "date": "2026 - Present",
+    "title": "ConsenTerra",
+    "subtitle": "Software Engineer • Intern",
+    "description": "Joined as an intern, contributing to develop ConsenTerra's products including client dashboards, website, and browser extensions powered by PriXplainer AI models.",
+    "type": "work",
+    "current": true
+  }
+]
