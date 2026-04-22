@@ -1,5 +1,7 @@
+import { motion } from 'framer-motion';
 import '../styles/Storyline.css';
 import storyline from '../storyline.json';
+import FadeIn from '../components/FadeIn';
 
 const typeIcon = {
     life:      '◈',
@@ -7,16 +9,33 @@ const typeIcon = {
     work:      '◆',
 };
 
+const containerVariants = {
+    hidden:  {},
+    visible: { transition: { staggerChildren: 0.18, delayChildren: 0.05 } },
+};
+
+const entryVariants = {
+    hidden:  { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.55, ease: 'easeOut' } },
+};
+
 function Storyline() {
     return (
         <>
-            <h3>storyline</h3>
-            <div className="timeline-wrapper">
+            <FadeIn><h3>storyline</h3></FadeIn>
+            <motion.div
+                className="timeline-wrapper"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.08 }}
+            >
                 <div className="timeline-line" />
                 {storyline.map((item, index) => (
-                    <div
+                    <motion.div
                         key={item.id}
                         className={`timeline-entry ${index % 2 === 0 ? 'left' : 'right'}`}
+                        variants={entryVariants}
                     >
                         <div className="timeline-content">
                             <span className="timeline-date">{item.date}</span>
@@ -31,9 +50,9 @@ function Storyline() {
                                 {typeIcon[item.type]}
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </>
     );
 }

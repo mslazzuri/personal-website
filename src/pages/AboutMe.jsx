@@ -1,15 +1,16 @@
 import myPicture from "../assets/myPic.png";
 import '../styles/AboutMe.css';
 import data from '../aboutme.json';
+import FadeIn from '../components/FadeIn';
 
 function AboutMe() {
     return (
         <>
-            {/* <h3>about:me</h3> */}
+            {/* <FadeIn><h3>about:me</h3></FadeIn> */}
             <div className="about-layout">
 
                 {/* ── Left column ── */}
-                <div className="about-left">
+                <FadeIn delay={0.1} className="about-left">
                     <img src={myPicture} alt="Matheus" className="about-photo" />
 
                     <div className="about-meta">
@@ -42,10 +43,10 @@ function AboutMe() {
                             {data.interests.map(i => <span key={i} className="chip">{i}</span>)}
                         </div>
                     </div>
-                </div>
+                </FadeIn>
 
                 {/* ── Right column ── */}
-                <div className="about-right">
+                <FadeIn delay={0.2} className="about-right">
                     <div className="about-heading">
                         <h1 className="about-name">{data.name}</h1>
                         <span className="about-title">{data.title}</span>
@@ -84,7 +85,7 @@ function AboutMe() {
                             </div>
                         ))}
                     </div>
-                </div>
+                </FadeIn>
 
             </div>
         </>
