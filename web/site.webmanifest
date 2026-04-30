@@ -1,0 +1,22 @@
+{
+  "name": "Matheus Secco Lazzuri",
+  "short_name": "MSL",
+  "description": "Software Engineer & Developer based in Kissimmee, FL.",
+  "start_url": "/portfolio/",
+  "display": "standalone",
+  "theme_color": "#EFECE3",
+  "background_color": "#EFECE3",
+  "icons": [
+    {
+      "src": "/portfolio/web/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/portfolio/web/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
