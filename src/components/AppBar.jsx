@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Logo from './Logo';
 import '../styles/AppBar.css';
 
 const navLinks = [
@@ -38,7 +39,7 @@ function AppBar() {
     return (
         <>
             <div className='appbar-container'>
-                <div className='msl-logo'>MSL</div>
+                <Logo />
 
                 {/* Desktop nav */}
                 <nav className='links desktop-nav'>

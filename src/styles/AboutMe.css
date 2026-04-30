@@ -217,7 +217,7 @@
 
     .about-photo {
         aspect-ratio: 1 / 1;
-        width: 180px;
+        width: 100%;
     }
 
     .about-name { font-size: 24pt; }
