@@ -1,7 +1,7 @@
 {
   "name": "Matheus Secco Lazzuri",
   "title": "Software Developer",
-  "summary": "I build things and love watching them come to life. Moved from Brazil to the US at 16 on my own — earned a soccer scholarship at Colorado Mesa University and graduated with a B.S. in Computer Science. Driven by curiosity, continuous learning, and the satisfaction of shipping software that actually helps people.",
+  "summary": "I build things and love watching them come to life. Moved from Brazil to the US at 16 on my own, earned a soccer scholarship at Colorado Mesa University and graduated with a B.S. in Computer Science. Driven by curiosity, continuous learning, and the satisfaction of shipping software that actually helps people.",
   "contact": {
     "email": "matheussecco2@gmail.com",
     "phone": "+1 (970) 914-2475",
@@ -32,8 +32,15 @@
       "title": "Software Engineer",
       "company": "ConsenTerra",
       "period": "2026 - Present",
-      "current": true,
+      "current": false,
       "description": "Working on the company's website, client dashboards and browser extension. Helped growing the company's AI product."
+    },
+    {
+      "title": "Founding Engineer",
+      "company": "ConsenTerra",
+      "period": "2026 - Present",
+      "current": true,
+      "description": "Founding engineer focused on driving business growth and product development."
     }
   ]
 }
