@@ -4,12 +4,11 @@
   --lightBlue: #8FABD4;
   --darkBlue: #4A70A9;
   --black: #000000;
+  --carbon: #27272A;
   --appbar-height: 60px;
   
   font-family: "IBM Plex Mono", monospace;
   font-weight: 400;
-  color: var(--black);
-  background-color: var(--backgroundColor);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -19,16 +18,24 @@
 html { scroll-behavior: smooth; }
 
 h3 {
-    color: var(--darkBlue);
-    font-size: 28pt;
-    margin: 0 0 32px;
+  color: var(--darkBlue);
+  font-size: 28pt;
+  margin: 0 0 32px;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  color: var(--black);
+  background-color: var(--backgroundColor);
 }
+
+body.dark {
+  --black: var(--white);
+  --backgroundColor: var(--carbon);
+}
+
 
 .padding-section {
   box-sizing: border-box;

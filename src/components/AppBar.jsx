@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Logo from './Logo';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../styles/AppBar.css';
 
 const navLinks = [
@@ -14,6 +15,15 @@ const navLinks = [
 function AppBar() {
     const [activeId, setActiveId]   = useState(null);
     const [drawerOpen, setDrawer]   = useState(false);
+    const [isDark, setIsDark] = useState(false);
+
+    useEffect(() => {
+        if (isDark) {
+            document.body.classList.add('dark');
+        } else {
+            document.body.classList.remove('dark');
+        }
+    }, [isDark])
 
     useEffect(() => {
         const sections = Array.from(document.querySelectorAll('.padding-section[id]'));
@@ -36,6 +46,8 @@ function AppBar() {
 
     const closeDrawer = () => setDrawer(false);
 
+    const toggleLightMode = () => { setIsDark(!isDark) }
+
     return (
         <>
             <div className='appbar-container'>
@@ -53,19 +65,38 @@ function AppBar() {
                             </li>
                         );
                     })}
+                    <li>
+                        <button 
+                            onClick={toggleLightMode}
+                            className='toggle-light-mode'
+                            onMouseEnter={(e) => ((e).currentTarget).style.color = "var(--lightBlue)"}
+                            onMouseLeave={(e) => ((e).currentTarget).style.color = "var(--black)"}
+                        >
+                            <div className={ isDark ? "light-off" : "light-on"} />
+                        </button>
+                    </li>
                 </nav>
 
-                {/* Mobile hamburger */}
-                <button
-                    className='hamburger'
-                    onClick={() => setDrawer(v => !v)}
-                    aria-label="Open navigation"
-                    aria-expanded={drawerOpen}
-                >
-                    <span className={`bar ${drawerOpen ? 'open' : ''}`} />
-                    <span className={`bar ${drawerOpen ? 'open' : ''}`} />
-                    <span className={`bar ${drawerOpen ? 'open' : ''}`} />
-                </button>
+                <span className='mobile-hamburguer-container'>
+                    <button 
+                        onClick={toggleLightMode}
+                        className='toggle-light-mode-mobile'
+                    >
+                        <div className={ isDark ? "light-off" : "light-on"} />
+                    </button>
+
+                    {/* Mobile hamburger */}
+                    <button
+                        className='hamburger'
+                        onClick={() => setDrawer(v => !v)}
+                        aria-label="Open navigation"
+                        aria-expanded={drawerOpen}
+                    >
+                        <span className={`bar ${drawerOpen ? 'open' : ''}`} />
+                        <span className={`bar ${drawerOpen ? 'open' : ''}`} />
+                        <span className={`bar ${drawerOpen ? 'open' : ''}`} />
+                    </button>
+                </span>              
             </div>
 
             {/* Backdrop */}
