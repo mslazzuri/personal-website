@@ -1,21 +1,24 @@
 import { useState, useEffect } from 'react';
 import Logo from './Logo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import LanguageSwitch from './LanguageSwitch';
 import '../styles/AppBar.css';
+import { useLanguage } from '../context/LanguageContext';
 
 const navLinks = [
-    { href: '#home',      label: 'home' },
-    { href: '#storyline', label: 'storyline' },
-    { href: '#projects',  label: 'projects' },
-    { href: '#about',     label: 'about:me' },
-    { href: '#skills',    label: 'skills' },
-    { href: '#contact',   label: 'contact:me' },
+    { href: '#home',      label: {US: 'home', PT: 'início'}},
+    { href: '#storyline', label: {US: 'storyline', PT: 'história'}},
+    { href: '#projects',  label: {US: 'projects', PT: 'projetos'} },
+    { href: '#about',     label: {US: 'about:me', PT: "sobre"} },
+    { href: '#skills',    label: {US: 'skills', PT: 'skills'} },
+    { href: '#contact',   label: {US: 'contact:me', PT: 'contate:me'} },
 ];
 
 function AppBar() {
     const [activeId, setActiveId]   = useState(null);
     const [drawerOpen, setDrawer]   = useState(false);
     const [isDark, setIsDark] = useState(false);
+    const { language } = useLanguage();
 
     useEffect(() => {
         if (isDark) {
@@ -60,7 +63,7 @@ function AppBar() {
                         return (
                             <li key={id}>
                                 <a href={href} className={activeId === id ? 'active' : ''} aria-current={activeId === id ? 'true' : 'false'}>
-                                    {label}
+                                    {label[language]}
                                 </a>
                             </li>
                         );
@@ -74,6 +77,9 @@ function AppBar() {
                         >
                             <div className={ isDark ? "light-off" : "light-on"} />
                         </button>
+                    </li>
+                    <li>
+                        <LanguageSwitch />
                     </li>
                 </nav>
 
@@ -108,23 +114,29 @@ function AppBar() {
 
             {/* Left drawer */}
             <nav className={`drawer ${drawerOpen ? 'drawer-open' : ''}`} aria-label="Mobile navigation">
-                <div className='drawer-logo'>MSL</div>
-                <ul className='drawer-links'>
-                    {navLinks.map(({ href, label }) => {
-                        const id = href.slice(1);
-                        return (
-                            <li key={id}>
-                                <a
-                                    href={href}
-                                    className={activeId === id ? 'active' : ''}
-                                    onClick={closeDrawer}
-                                >
-                                    {label}
-                                </a>
-                            </li>
-                        );
-                    })}
-                </ul>
+                <div className='drawer-logo'></div>
+                <div style={{
+                    display: "flex", flexDirection: 'column', justifyContent: "space-between", height: "100%"
+                }}>
+                    <ul className='drawer-links'>
+                        {navLinks.map(({ href, label }) => {
+                            const id = href.slice(1);
+                            return (
+                                <li key={id}>
+                                    <a
+                                        href={href}
+                                        className={activeId === id ? 'active' : ''}
+                                        onClick={closeDrawer}
+                                    >
+                                        {label[language]}
+                                    </a>
+                                </li>
+                            );
+                        })}
+                    </ul>
+
+                    <LanguageSwitch />
+                </div>
             </nav>
         </>
     );

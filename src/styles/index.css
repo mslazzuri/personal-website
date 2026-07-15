@@ -11,7 +11,11 @@
   --card-shadow1: rgba(74, 112, 169, 0.08);
   --card-shadow2: rgba(74, 112, 169, 0.16);
   --card-background: var(--backgroundColor);
-  
+  --lang-switch-bg: #d8d5cd;
+  --lang-switch-fg: var(--darkBlue);
+  --lang-switch-active-bg: var(--darkBlue);
+  --lang-switch-active-fg: var(--white);
+
   font-family: "IBM Plex Mono", monospace;
   font-weight: 400;
   font-synthesis: none;
@@ -44,6 +48,10 @@ body.dark {
   --card-shadow1: transparent;
   --card-shadow2: transparent;
   --card-background: #2c2d30;
+  --lang-switch-bg: #3a3d42;
+  --lang-switch-fg: var(--white);
+  --lang-switch-active-bg: var(--lightBlue);
+  --lang-switch-active-fg: var(--carbon);
 }
 
 

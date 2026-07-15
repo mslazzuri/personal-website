@@ -1,11 +1,13 @@
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import '../styles/ContactMeForm.css';
+import { useLanguage } from '../context/LanguageContext';
 
 function ContactMeForm() {
     const form = useRef();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState(null); // 'success' or 'error'
+    const { language } = useLanguage();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -42,33 +44,33 @@ function ContactMeForm() {
             <form ref={form} className="form" onSubmit={handleSubmit}>
                 <div className="form-row">
                     <div className="form-field">
-                        <label htmlFor="first-name">First Name</label>
+                        <label htmlFor="first-name">{language == 'US' ? "First Name" : "Nome"}</label>
                         <input type="text" name="first_name" id="first-name" required />
                     </div>
                     
                     <div className="form-field">
-                        <label htmlFor="last-name">Last Name</label>
+                        <label htmlFor="last-name">{language == 'US' ? "Last Name" : "Sobrenome"}</label>
                         <input type="text" name="last_name" id="last-name" required />
                     </div>
                 </div>
                 
                 <div className="form-field">
-                    <label htmlFor="service">Service</label>
+                    <label htmlFor="service">{language == 'US' ? "Service" : "Serviço"}</label>
                     <select name="service" id="service" required>
-                        <option value="">Select a service</option>
-                        <option value="web-development">Web Development</option>
-                        <option value="consulting">Consulting</option>
-                        <option value="other">Other</option>
+                        <option value="">{language == 'US' ? "Select a service" : "Selecione um serviço"}</option>
+                        <option value="web-development">{language == 'US' ? "Web Development" : "Desenvolvimento Web"}</option>
+                        <option value="consulting">{language == 'US' ? "Consulting" : "Consulta"}</option>
+                        <option value="other">{language == 'US' ? "Other" : "Outro"}</option>
                     </select>
                 </div>
                 
                 <div className="form-field">
-                    <label htmlFor="email">Email (required)</label>
+                    <label htmlFor="email">{language == 'US' ? "Email (required)" : "Email (obrigatório)"}</label>
                     <input type="email" name="user_email" id="email" required />
                 </div>
                 
                 <div className="form-field">
-                    <label htmlFor="message">Message</label>
+                    <label htmlFor="message">{language == 'US' ? "Message" : "Mensagem"}</label>
                     <textarea name="message" id="message" rows="3" required></textarea>
                 </div>
                 
@@ -81,7 +83,7 @@ function ContactMeForm() {
                 )}
                 
                 <button type="submit" className="submit-btn" disabled={isSubmitting}>
-                    {isSubmitting ? 'Sending...' : 'Submit'}
+                    {isSubmitting ? language == 'US' ? "Submiting..." : "Enviando..." : language == 'US' ? "Submit" : "Enviar"}
                 </button>
             </form>
         </>
