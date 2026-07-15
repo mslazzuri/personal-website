@@ -3,11 +3,11 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: var(--backgroundColor);
-    border: 1px solid rgba(74, 112, 169, 0.2);
+    background-color: var(--card-background);
+    border: 1px solid var(--card-border);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(74, 112, 169, 0.08);
+    box-shadow: 0 4px 20px var(--card-shadow1);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     scroll-snap-align: center;
     cursor: default;
@@ -15,7 +15,7 @@
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 32px rgba(74, 112, 169, 0.16);
+    box-shadow: 0 10px 32px var(--card-shadow2);
 }
 
 /* ── Image ───────────────────────────────────────────────── */
@@ -24,7 +24,7 @@
     height: 220px;
     object-fit: cover;
     display: block;
-    border-bottom: 1px solid rgba(74, 112, 169, 0.12);
+    border-bottom: 1px solid var(--card-border);
 }
 
 /* ── Body ────────────────────────────────────────────────── */

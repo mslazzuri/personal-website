@@ -1,7 +1,8 @@
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import '../styles/Storyline.css';
 import storyline from '../storyline.json';
 import FadeIn from '../components/FadeIn';
+import { useLanguage } from '../context/LanguageContext';
 
 const typeIcon = {
     life:      '◈',
@@ -20,9 +21,10 @@ const entryVariants = {
 };
 
 function Storyline() {
+    const { language } = useLanguage();
     return (
         <>
-            <FadeIn><h3>storyline</h3></FadeIn>
+            <FadeIn><h3>{language == 'US' ? "storyline" : "história"}</h3></FadeIn>
             <motion.div
                 className="timeline-wrapper"
                 variants={containerVariants}
@@ -38,11 +40,11 @@ function Storyline() {
                         variants={entryVariants}
                     >
                         <div className="timeline-content">
-                            <span className="timeline-date">{item.date}</span>
-                            <h4 className="timeline-title">{item.title}</h4>
-                            <span className="timeline-subtitle">{item.subtitle}</span>
-                            <p className="timeline-description">{item.description}</p>
-                            {item.current && <span className="timeline-badge">current</span>}
+                            <span className="timeline-date">{item.date[language]}</span>
+                            <h4 className="timeline-title">{item.title[language]}</h4>
+                            <span className="timeline-subtitle">{item.subtitle[language]}</span>
+                            <p className="timeline-description">{item.description[language]}</p>
+                            {item.current && <span className="timeline-badge">{language == 'US' ? "current" : "presente"}</span>}
                         </div>
                         <div className="timeline-connector">
                             <div className="connector-line" />

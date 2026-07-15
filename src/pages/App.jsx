@@ -7,7 +7,6 @@ import Skills from './Skills.jsx';
 import Storyline from './Storyline.jsx';
 import ContactMe from './ContactMe.jsx';
 
-
 function App() {
   return (
     <>

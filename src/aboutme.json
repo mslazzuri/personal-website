@@ -1,20 +1,23 @@
 {
   "name": "Matheus Secco Lazzuri",
-  "title": "Software Developer",
-  "summary": "I build things and love watching them come to life. Moved from Brazil to the US at 16 on my own, earned a soccer scholarship at Colorado Mesa University and graduated with a B.S. in Computer Science. Driven by curiosity, continuous learning, and the satisfaction of shipping software that actually helps people.",
+  "title": {"US": "Software Developer", "PT": "Engenheiro de Software"},
+  "summary": {
+    "US": "I build things and love watching them come to life. Moved from Brazil to the US at 16 on my own, earned a soccer scholarship at Colorado Mesa University and graduated with a B.S. in Computer Science. Driven by curiosity, continuous learning, and the satisfaction of shipping software that actually helps people.",
+    "PT": "Eu construo coisas e amo assistir a elas ganhado vida. Me mudei do Brasil para os Estados Unidos aos 16 anos por conta própria, consegui uma bolsa de estudos na Colorado Mesa University e me graduei com um Bacharelado em Ciências da Computação. Movido pelo curiosidade, aprendizado constante, e a satisfação de entregar software que de fato ajuda as pessoas."
+  },
   "contact": {
     "email": "matheussecco2@gmail.com",
-    "phone": "+1 (970) 914-2475",
+    "phone": {"US": "+1 (970) 914-2475", "PT": "+55 11 98814-9679"},
     "location": "Kissimmee, FL",
     "linkedin": "http://www.linkedin.com/in/matheuslazzuri",
     "github": "https://github.com/mslazzuri"
   },
-  "languages": ["Portuguese", "English", "Spanish"],
-  "interests": ["Soccer", "Music", "Travel", "Good food", "Movies"],
-  "availability": "Open to opportunities",
+  "languages": {"US": ["Portuguese", "English", "Spanish"], "PT": ["Português", "Inglês", "Espanhol"]},
+  "interests": {"US": ["Soccer", "Music", "Travel", "Good food", "Movies"], "PT": ["Futebol", "Música", "Viagens", "Comida boa"]},
+  "availability": {"US": "Open to work", "PT": "Aberto à oportunidades"},
   "education": [
     {
-      "degree": "B.S. Computer Science",
+      "degree": {"US": "B.S. Computer Science", "PT": "Bacharelado em Ciências da Computação"},
       "school": "Colorado Mesa University",
       "location": "Grand Junction, CO",
       "period": "2021 - 2025"
@@ -22,25 +25,24 @@
   ],
   "experience": [
     {
-      "title": "Software Engineer • Full Stack",
+      "title": {"US": "Software Engineer • Full Stack", "PT": "Engenheiro de Software • Full Stack"},
       "company": "Q13",
-      "period": "2024 - 2025",
+      "period": {"US": "2024 - 2025", "PT": "2024 - 2025"},
       "current": false,
-      "description": "Worken on development of an Integrated Management System to replace excel-based workflows within the company."
+      "description": {
+        "US": "Worken on development of an Integrated Management System to replace excel-based workflows within the company.",
+        "PT": "Trabalhei no desenvolvimento de um Sistema de Gestão Interno a fim de substituir e automatizar processos de trabalho baseados em excel."
+      }
     },
     {
-      "title": "Software Engineer",
+      "title": {"US": "Software Engineer", "PT": "Engenheiro de Software"},
       "company": "ConsenTerra",
-      "period": "2026 - Present",
+      "period": {"US": "2026 - Present", "PT": "2026 - Presente"},
       "current": false,
-      "description": "Working on the company's website, client dashboards and browser extension. Helped growing the company's AI product."
-    },
-    {
-      "title": "Founding Engineer",
-      "company": "ConsenTerra",
-      "period": "2026 - Present",
-      "current": true,
-      "description": "Founding engineer focused on driving business growth and product development."
+      "description": {
+        "US": "Working on the company's website, client dashboards and browser extension. Helped growing the company's AI product.",
+        "PT": "Trabalhei na landing page e na plataforma B2B da empresa, além de dashboards de clientes, extensão do Chrome. Ajudei a crescer o produto de IA da companhia."
+      }
     }
   ]
 }

@@ -1,24 +1,33 @@
 [
     {
         "id": "1",
-        "name": "IMS for Quantum13",
-        "description": "An Integrated Management System for Quantum13, a network solutions company. It replaces internal Excel-based workflows with role-based access control, project management tools, live client dashboards, and data visualization.",
+        "name": {"US": "IMS for Quantum13", "PT": "SGI da Quantum13"},
+        "description": {
+            "US": "An Integrated Management System for Quantum13, a network solutions company. It replaces internal Excel-based workflows with role-based access control, project management tools, live client dashboards, and data visualization.",
+            "PT": "Um Sistema de Gestão integrado para a Quantum13, uma empresa de soluções de network. O Sistema substitui processos baseados em excel com controle de acesso baseado em permissões, ferramentas de gerenciamento de projetos, dashboard de clientes em tempo real e visualização de dados."
+        },
         "imgPath": "/portfolio/assets/projects-screenshots/quantum13-screenshot.png",
         "tools": ["flutter", "dart", "firebase", "javascript"],
         "liveLink": "https://gestao-instalacao.web.app"
     },
     {
         "id": "2",
-        "name": "PriXplainer Browser Extension",
-        "description": "ConsenTerra's browser extension utilizes an AI model to analyze and grade privacy policies. Simply open the extension, and find out what companies are doing with your data.",
+        "name": {"US": "PriXplainer Browser Extension", "PT": "Extensão do Chrome PriXplainer"},
+        "description": {
+            "US": "ConsenTerra's browser extension utilizes an AI model to analyze and grade privacy policies. Simply open the extension, and find out what companies are doing with your data.",
+            "PT": "A extensão de navegador da ConsenTerra utiliza um modelo de IA para analisar e classificar políticas de privacidade. Abra a extensão e descubra o que as empresas fazem com seus dados."
+        },
         "imgPath": "/portfolio/assets/projects-screenshots/prixplainer-screenshot.png",
         "tools": ["html", "css", "javascript"],
         "liveLink": "https://chromewebstore.google.com/detail/prixplainer-privacy-risk/ngfdbpkbcaaneaiakdhaceikccpmhadl"
     },
     {
         "id": "3",
-        "name": "Seccotruco.com",
-        "description": "A website that teaches how to play Truco, a popular Brazilian card game. I built it to help my friends learn the rules and strategies.",
+        "name": {"US": "Seccotruco.com", "PT": "Seccotruco.com"},
+        "description": {
+            "US": "A website that teaches how to play Truco, a popular Brazilian card game. I built it to help my friends learn the rules and strategies.",
+            "PT": "Um site que ensina como jogar Truco, um jogo de cartas brasileiro popular. Construí para ajudar meus amigos a aprender as regras e estratégias."
+        },
         "imgPath": "/portfolio/assets/projects-screenshots/seccotruco-screenshot.png",
         "tools": ["react", "html", "css", "javascript"],
         "gitLink": "https://github.com/mslazzuri/truco_counter",
@@ -26,24 +35,33 @@
     },
     {
         "id": "4",
-        "name": "MSL Manager",
-        "description": "A desktop password manager for macOS that uses cryptography to securely store passwords. Built while learning Firebase for backend integration.",
+        "name": {"US": "MSL Manager", "PT": "MSL Manager"},
+        "description": {
+            "US": "A desktop password manager for macOS that uses cryptography to securely store passwords. Built while learning Firebase for backend integration.",
+            "PT": "Um gerenciador de senhas para desktop no macOS que usa criptografia para armazenar senhas com segurança. Construído enquanto aprendia Firebase para integração de backend."
+        },
         "imgPath": "/portfolio/assets/projects-screenshots/msl-manager-screenshot.png",
         "tools": ["dart", "flutter", "firebase", "javascript"],
         "gitLink": "https://github.com/mslazzuri/msl-manager"
     },
     {
         "id": "5",
-        "name": "Python Manager",
-        "description": "A desktop password manager with a GUI built using Python and Tkinter. Developed as my first password manager for an Operating Systems class project.",
+        "name": {"US": "Python Manager", "PT": "Python Manager"},
+        "description": {
+            "US": "A desktop password manager with a GUI built using Python and Tkinter. Developed as my first password manager for an Operating Systems class project.",
+            "PT": "Um gerenciador de senhas para desktop com interface gráfica construído usando Python e Tkinter. Desenvolvido como meu primeiro gerenciador de senhas para um projeto de classe de Sistemas Operacionais."
+        },
         "imgPath": "/portfolio/assets/projects-screenshots/python-manager-screenshot.png",
         "tools": ["python"],
         "gitLink": "https://github.com/mslazzuri/PasswordManager-Python"
     },
     {
         "id": "6",
-        "name": "Mavaquatics",
-        "description": "A centralized platform for swimmers, coaches, and parents to interact and collaborate. Features role-based access control and was developed as a semester-long Software Engineering project.",
+        "name": {"US": "Mavaquatics", "PT": "Mavaquatics"},
+        "description": {
+            "US": "A centralized platform for swimmers, coaches, and parents to interact and collaborate. Features role-based access control and was developed as a semester-long Software Engineering project.",
+            "PT": "Uma plataforma centralizada para nadadores, treinadores e pais interagirem e colaborarem. Apresenta controle de acesso baseado em funções e foi desenvolvida como um projeto de Engenharia de Software de um semestre."
+        },
         "imgPath": "/portfolio/assets/projects-screenshots/mavaquatics-screenshot.png",
         "tools": ["flutter", "dart" ,"firebase"],
         "gitLink": "https://github.com/mslazzuri/mavaquatics",

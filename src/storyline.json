@@ -1,34 +1,37 @@
 [
   {
     "id": 1,
-    "date": "2019",
-    "title": "Leaving Brazil",
-    "subtitle": "Soccer scholarship & new beginnings",
-    "description": "Left Brazil to pursue a soccer scholarship and academic opportunities in the United States, chasing both sport and a new life.",
+    "date": {"US": "2019", "PT": "2019"},
+    "title": {"US": "Leaving Brazil", "PT": "Saindo do Brasil"},
+    "subtitle": {"US": "Soccer scholarship & new beginnings", "PT": "Bolsa esportiva e novos começos"},
+    "description": {
+      "US": "Left Brazil to pursue a soccer scholarship and academic opportunities in the United States, chasing both sport and a new life.",
+      "PT": "Saí do Brasil com uma bolsa esportiva em 2019, e com oportunidades acadêmicas nos Estados Unidos, buscando ambos esporte e uma nova vida."
+    },
     "type": "life"
   },
   {
     "id": 2,
-    "date": "2021 - 2025",
-    "title": "Colorado Mesa University",
-    "subtitle": "B.S. Computer Science · Grand Junction, CO",
-    "description": "Played college soccer while earning a degree in Computer Science. Balanced competitive athletics with a growing passion for software engineering.",
+    "date": {"US": "2021 - 2025", "PT": "2021 - 2025"},
+    "title": {"US": "Colorado Mesa University", "PT": "Colorado Mesa University"},
+    "subtitle": {"US": "B.S. Computer Science · Grand Junction, CO", "PT": "B.S. Ciência da Computação · Grand Junction, CO"},
+    "description": {"US": "Played college soccer while earning a degree in Computer Science. Balanced competitive athletics with a growing passion for software engineering.", "PT": "Joguei futebol na faculdade enquanto obtinha um diploma em Ciência da Computação. Balanceei o atletismo competitivo com uma paixão crescente por engenharia de software."},
     "type": "education"
   },
   {
     "id": 3,
-    "date": "2024 - 2025",
-    "title": "Q13",
-    "subtitle": "Software Engineer • Full Stack",
-    "description": "Joined Q13 alongside my studies to develop an Integrated Management System that would help replace the company's excel-based workflow.",
+    "date": {"US": "2024 - 2025", "PT": "2024 - 2025"},
+    "title": {"US": "Q13", "PT": "Q13"},
+    "subtitle": {"US": "Software Engineer • Full Stack", "PT": "Engenheiro de Software • Full Stack"},
+    "description": {"US": "Joined Q13 alongside my studies to develop an Integrated Management System that would help replace the company's excel-based workflow.", "PT": "Entrei na Q13 durante meus estudos para desenvolver um Sistema de Gerenciamento Integrado que ajudaria a substituir o fluxo de trabalho baseado em excel da empresa."},
     "type": "work"
   },
   {
     "id": 4,
-    "date": "2026 - Present",
-    "title": "ConsenTerra",
-    "subtitle": "Software Engineer • Intern",
-    "description": "Joined as an intern, contributing to develop ConsenTerra's products including client dashboards, website, and browser extensions powered by PriXplainer AI models.",
+    "date": { "US":"2026 - Present", "PT": "2026 - Presente"},
+    "title": {"US": "ConsenTerra", "PT": "ConsenTerra"},
+    "subtitle": {"US": "Software Engineer", "PT": "Engenheiro de Software"},
+    "description": {"US": "Joined as an intern, contributing to develop ConsenTerra's products including client dashboards, website, and browser extensions powered by PriXplainer AI models.", "PT": "Entrei como estagiário, contribuindo para desenvolver produtos da ConsenTerra incluindo painéis de cliente, website e extensões de navegador alimentadas por modelos de IA PriXplainer."},
     "type": "work",
     "current": true
   }
