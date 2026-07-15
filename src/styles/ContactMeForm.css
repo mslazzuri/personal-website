@@ -19,7 +19,7 @@
 
 .form-field label {
     font-size: 10pt;
-    color: #666;
+    color: var(--text-muted);
     margin-bottom: 5px;
     text-align: left;
 }

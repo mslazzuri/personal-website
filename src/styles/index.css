@@ -4,8 +4,13 @@
   --lightBlue: #8FABD4;
   --darkBlue: #4A70A9;
   --black: #000000;
-  --carbon: #27272A;
+  --carbon: #202123;
   --appbar-height: 60px;
+  --muted-text: #444;
+  --card-border: rgba(74, 112, 169, 0.2);
+  --card-shadow1: rgba(74, 112, 169, 0.08);
+  --card-shadow2: rgba(74, 112, 169, 0.16);
+  --card-background: var(--backgroundColor);
   
   font-family: "IBM Plex Mono", monospace;
   font-weight: 400;
@@ -34,6 +39,11 @@ body {
 body.dark {
   --black: var(--white);
   --backgroundColor: var(--carbon);
+  --muted-text: #aaa;
+  --card-border: transparent;
+  --card-shadow1: transparent;
+  --card-shadow2: transparent;
+  --card-background: #2c2d30;
 }
 
 

@@ -19,7 +19,7 @@
     flex: 1;
     text-align: left;
     line-height: 0;
-    color: #444;
+    color: var(--muted-text);
 }
 
 .right-pannel {
@@ -72,7 +72,7 @@
     }
     .left-pannel {
         font-size: 10pt;
-        color: #444;
+        color: var(--muted-text);
     }
     .references { 
         flex-direction: column;
